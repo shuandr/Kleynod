@@ -132,9 +132,11 @@
     	</div>
     </nav>
     
-    	<script src="js/isotope.pkgd.min.js"></script>
+    <!-- 	<script src="js/isotope.pkgd.min.js"></script>
+     -->	
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     
-    <div id="catalog-baget" class="row column moulding">
+    <div id="catalog-baget" class="row column ">
     	<div class="clnd-title"><h2>колекція багету</h2></div>
     	<div class="row column moulding-selectors filters clearfix">
     			<div class="button-group float-left" data-filter-group="color"> 
@@ -154,92 +156,36 @@
     			  <button class="button success" data-filter=".width-lg">5—10 см</button>
     			  <button class="button success" data-filter=".width-xl">більше 10 см</button>
     			</div>
-    <!-- 		<div class="medium-6 column ">
-     -->			
+    <div class="medium-6 column ">			
     		</div>
     </div>
-    
     <!-- GRID -->
-    <div class="row small-up-2 medium-up-3 large-up-4 grid">
+     <!-- small-up-2 medium-up-3 large-up-4 -->
+    <div ng-app="mouldCatalog" ng-controller="mouldCtrl" class="row small-up-2 medium-up-3 large-up-4">
     
-      <div class="column  grid-item silver width-sm">
-    	<div class="grid-item_inner"><div><img src="assets/img/catalog/baget/255.jpg"/></div>
-    	<div class="grid-item__details clearfix">
-    	  <div class="grid-item__width">5 cm</div>
-    	  <div class="grid-item__code">код: 255</div>
-    	</div>
-    	</div>
+      <div ng-repeat="x in mouldings" class="column">
+    	<div class="mould-item">
+    		<a href="assets/img/catalog/baget/Serbia/{[{x.code}]}.jpg" >
+    		<img src="assets/img/catalog/baget/Serbia/thumbs/{[{x.code}]}.jpg"/></a>
+    		<div class="clearfix mould-item__details text-center">
+    		<table style="width:100%">
+      <tr><th>код</th> <th>ширина</th> <th>висота</th><th>ціна, €</th></tr>
+      <tr><td class="mould-item_code">{[{x.code}]}</td> <td>{[{x.width}]}</td> <td>{[{x.height}]}</td>
+      <td class="item_price">{[{x.price}]}</td>  </tr>
+      </table>
+    		  <!-- <div class="mould-item__width" ng-bind="x.width">{[{x.code}]}</div>
+    		  <div class="mould-item__code"></div> -->
+    		</div>
+    	  </div>
       </div>
-       <div class="column grid-item wood width-md" >
-    	<div class="grid-item_inner"><img src="assets/img/catalog/baget/278.jpg"/>    
-    	<div class="grid-item__details clearfix">
-    	  <div class="grid-item__width">5 cm</div>
-    	  <div class="grid-item__code">код: 255</div>
-    	</div>
-    	</div>
-      </div>
-       <div class="column grid-item gold width-xl">
-    	<div class="grid-item_inner"><img src="assets/img/catalog/baget/362.jpg"/>
-    	<div class="grid-item__details clearfix">
-    	  <div class="grid-item__width">5 cm</div>
-    	  <div class="grid-item__code">код: 255</div>
-    	</div>
-    	</div>
-      </div>
-       <div class="column  grid-item black width-md">
-    	<div class="grid-item_inner"><img src="assets/img/catalog/baget/363.jpg"/>
-    	<div class="grid-item__details clearfix">
-    	  <div class="grid-item__width">5 cm</div>
-    	  <div class="grid-item__code">код: 255</div>
-    	</div>
-    	</div>
-      </div>
-       <div class="column  grid-item white width-sm">
-    	<div class="grid-item_inner"><img src="assets/img/catalog/baget/365.jpg"/>
-    	<div class="grid-item__details clearfix">
-    	  <div class="grid-item__width">5 cm</div>
-    	  <div class="grid-item__code">код: 255</div>
-    	</div>
-    	</div>
-      </div>
-       <div class="column  grid-item silver width-lg">
-    	<div class="grid-item_inner"><img src="assets/img/catalog/baget/368.jpg"/>
-    	<div class="grid-item__details clearfix">
-    	  <div class="grid-item__width">4 cm</div>
-    	  <div class="grid-item__code">код: 255</div>
-    	</div>
-    	</div>
-      </div>
-       <div class="column  grid-item golg width-sm">
-    	<div class="grid-item_inner"><img src="assets/img/catalog/baget/370.jpg"/>
-    	<div class="grid-item__details clearfix">
-    	  <div class="grid-item__width">16 cm</div>
-    	  <div class="grid-item__code">код: 255</div>
-    	</div>
-    	</div>
-      </div>
-       <div class="column  grid-item black width-md">
-    	<div class="grid-item_inner"><img src="assets/img/catalog/baget/374.jpg"/>
-    	<div class="grid-item__details clearfix">
-    	  <div class="grid-item__width">12 cm</div>
-    	  <div class="grid-item__code">код: 255</div>
-    	</div>
-    	</div>
-      </div>
-       <div class="column  grid-item wood width-xl">
-    	<div class="grid-item_inner"><img src="assets/img/catalog/baget/375.jpg"/>
-    	<div class="grid-item__details clearfix">
-    	  <div class="grid-item__width">8 cm</div>
-    	  <div class="grid-item__code">код: 255</div>
-    	</div>
-    	</div>
-      	</div>
+       
     
+    </div>
     </div>
     <!-- END OF grid -->
     
     
-    
+     
         <footer>
         	<div class="expanded row clnd-footer">
         	<div class="column footer-divider"></div>
@@ -300,10 +246,39 @@
         
             </script>
     
+    <script>
+    
+    
+    
+    var app = angular.module('mouldCatalog', []);
+    
+    app.config(function($interpolateProvider) {
+      $interpolateProvider.startSymbol('{[{');
+      $interpolateProvider.endSymbol('}]}');
+    });
+    
+    app.controller('mouldCtrl', function($scope, $http) {
+        $http.get("assets/json/injac_katalog.json").then(function(response) {
+            $scope.mouldings = response.data.items;
+        });
+    });
+    </script> 
 </div>
 </div>    
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/jquery.prettyPhoto.js"></script>
+    <script src="assets/js/plugins/jquery.prettyPhoto.js"></script>
+    <script src="assets/js/plugins/owl.carousel.min.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82329311-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
     
       
   </body>
