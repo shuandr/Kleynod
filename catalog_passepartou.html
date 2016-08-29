@@ -136,81 +136,33 @@
     <!-- 	<script src="js/isotope.pkgd.min.js"></script>
      -->	
      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-     <script src="assets/js_plugins/myAngular.js"></script>
+     <script src="assets/js_plugins/myAngularPass.js"></script>
     
-    <div class="row column">
-    <div class="carton-hole">
-    <img src="assets/img/hero_image_baget.jpg" >
-    </div></div>
+    <div id="catalog-passepartou" class="row column ">
+    	<div class="clnd-title"><h2>колекція паспарту</h2></div>
     
-    <div id="catalog-baget" class="row column ">
-    	<div class="clnd-title"><h2>колекція багету</h2>
-    	</div>
-    	</div>
-    	
-    <!-- GRID -->
+    	<div class="white-grad" style="padding:16px 0px 20px;"><div class="v-margin">
+    			<p>У нас завжди в наявності широка палітра високоякісного паспарту-картону голландського виробника Koninklijke Moorman Karton та інших виробників. Пропонуємо паспарту з покриттям: папір, тканина та оксамит.</p>
+    	<p><strong>Ціни:</strong>
+    	паспарту з паперовим покриттям — 240 грн/м<sup>2</sup>;
+    	паспарту з покриттям тканина та оксамит – 568 грн/м<sup>2</sup>.</p>
+    	<p>Продаємо паспарту-картон листами (гуртом). Інформацію про наявність та ціни паспарту надаємо по телефону або електронній пошті.</p>
+    		</div></div>
     
-    <div ng-app="mouldCatalog" ng-controller="mouldCtrl" >
-    <div class="row small-up-1 medium-up-2 large-up-4">
-    	<div class="column">виробник:
-    		<select ng-model="myFilter.producent" ng-options="x for x in mouldProducent">
-    		</select>
     	</div>
     
-    	<div class="column">матеріал:
-    		<select ng-model="myFilter.material" ng-options="x for x in mouldMaterial" >
-    		</select> 
-    	</div>
-    
-    	<div class="column">ширина:
-    		<select ng-model="myFilter.width" ng-options="x for x in mouldWidths" >
-    		</select> 
-    	</div>
-    	<div class="column">код багету:
-    		<input type="text" ng-model="myFilter.code">
+    <div ng-app="passCatalog" ng-controller="passCtrl" >
+    <div class="row">
+      <div ng-repeat="x in passprt" class="column">
+    	<div class="carton-hole v-margin">
+    	<img ng-src="assets/img/catalog/passepartou/{[{x}]}.jpg"/>
     		
     	</div>
-    </div>
-    <div class="row column text-right">
-    сортувати: 
-    <button type="button" class="small  button" 
-     ng-click="sort('price')">за ціною</button>
-    <button type="button" class="small  button" 
-     ng-click="sort('width')">за шириною</button>
-    <button type="button" class="small  button" 
-     ng-click="sort('code')">за кодом</button>
-    </div>
-    
-    <div class="row small-up-2 medium-up-3 large-up-4" >
-      <div ng-repeat="x in allMoulds | orderBy:sortKey:reverse | filter: myFilter " class="column">
-    	<div class="mould-item">
-    		<a ng-href="assets/img/catalog/baget/{[{x.code}]}.jpg" >
-    		<img ng-src="assets/img/catalog/baget/thumbs/{[{x.code}]}.jpg"/></a>
-    		<div class="row collapse  mould-item__details text-center">
-    		<div class="medium-6 column">
-    			<table style="width:100%; border:0px">
-    			<tr> <th>ширина</th><th>висота</th></tr>
-    			<td>{[{x.width}]} мм</td> <td>{[{x.height}]} мм</td>
-    			  </table>
-    		</div>
-    		<div class="medium-6 column ">
-    			<table style="width:100%; border:0px">
-    			<tr><th>код</th><th class="text-right">ціна, € </th></tr>
-    			<tr><td class="mould-item_code">{[{x.code}]}</td> 
-    			<td class="item_price">{[{x.price}]}</td>  </tr>
-    			</table>
-    		</div>
-    
-    		
-    		  
-    		</div>
-    	  </div>
       </div>
        
     
     </div>
     </div>
-    <!-- END OF grid -->
     
     
      
