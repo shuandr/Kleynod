@@ -163,8 +163,11 @@
     	</div>
     
     	<div class="column">ширина:
-    		<select ng-model="myFilter.width" ng-options="x for x in mouldWidths" >
-    		</select> 
+    	<select ng-model="myFilter.widthRange" >
+          <option ng-repeat="item in mouldWidths" 
+          ng-value="item.value">{[{item.option}]}</option>
+    
+    	</select> 
     	</div>
     	<div class="column">код багету:
     		<input type="text" ng-model="myFilter.code">
