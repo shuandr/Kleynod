@@ -136,7 +136,10 @@
     <!-- 	<script src="js/isotope.pkgd.min.js"></script>
      -->	
      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+     
+    
      <script src="assets/js_plugins/myAngular.js"></script>
+     <script src="assets/js_plugins/angular-animate.js"></script>
     
     <div class="row column">
     <div class="carton-hole">
@@ -164,7 +167,8 @@
     
     	<div class="column">ширина:
     	<select ng-model="myFilter.widthRange" >
-          <option ng-repeat="item in mouldWidths" 
+          <option ng-value="" ng-selected=" " >всі</option>
+    <option ng-repeat="item in mouldWidths" 
           ng-value="item.value">{[{item.option}]}</option>
     
     	</select> 
@@ -185,7 +189,7 @@
     </div>
     
     <div class="row small-up-2 medium-up-3 large-up-4" >
-      <div ng-repeat="x in allMoulds | orderBy:sortKey:reverse | filter: myFilter " class="column">
+      <div ng-repeat="x in allMoulds | orderBy:sortKey:reverse | filter: myFilter "  class="column fade">
     	<div class="mould-item">
     		<a ng-href="assets/img/catalog/baget/{[{x.code}]}.jpg" >
     		<img ng-src="assets/img/catalog/baget/thumbs/{[{x.code}]}.jpg"/></a>

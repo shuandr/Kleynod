@@ -1,4 +1,4 @@
-var app = angular.module('mouldCatalog', []);
+var app = angular.module('mouldCatalog', ['ngAnimate']);
 
 
 
@@ -8,33 +8,22 @@ app.config(function($interpolateProvider) {
 });
 
 
-/*app.filter('myFilter', function() {
-  
-  return function(items) {
-    if (selectedProducent == "Іспанія") {
-      return items = espanaMoulds;
-    } debugger;
-    if (selectedProducent == "Сербія") {
-      return items = serbMoulds;
-    }
 
-    };
-});    */
 
 app.controller('mouldCtrl', function($scope, $http) {
     $scope.mouldProducent = ["","Сербія", "Іспанія", "Польща", "Україна"];
     $scope.mouldMaterial = ["", "дерево", "пластик", "метал"];
     // $scope.mouldWidths = ['', 14,15,17,20,22,24,29,32,42,49,63,70,72,87,90,92];
     $scope.mouldWidths = [
-    {value: '1'|'2'|'3'|'4', option:'всі'}, 
+    // {value: ' ', option:'всі'}, 
     {value: '1', option:'<25 mm'}, 
     {value: '2', option:'25-50 mm'}, 
     {value: '3', option:'50-90 mm'}, 
     {value: '4', option:'>90 mm'}
     ];
     // $scope.mouldWidths = ['', '<25', '>25' & '<50', '>50' & '<90', '>90'];
-    $scope.selectedProducent = $scope.mouldProducent[0];
-    $scope.selectedMaterial = $scope.mouldMaterial[0];
+    // $scope.selectedProducent = $scope.mouldProducent[0];
+    // $scope.selectedMaterial = $scope.mouldMaterial[0];
     // $scope.selectedWidth = $scope.mouldWidths[0];
     $scope.allMoulds = [];
     
