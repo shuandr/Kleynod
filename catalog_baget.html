@@ -191,9 +191,9 @@
     						</div>
     						<div class="medium-6 column ">
     							<table style="width:100%; border:0px">
-    								<tr><th>код</th><th class="text-right">ціна, € </th></tr>
+    								<tr><th>код</th><th class="text-right">ціна, грн </th></tr>
     								<tr><td class="mould-item_code">{[{x.code}]}</td>
-    								<td class="item_price">{[{x.price}]}</td>  </tr>
+    								<td class="item_price">{[{x.price  | currency : "" : 0}]}</td>  </tr>
     							</table>
     						</div>
     						

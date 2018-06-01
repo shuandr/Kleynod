@@ -11,9 +11,8 @@ app.config(function($interpolateProvider) {
 
 
 app.controller('mouldCtrl', function($scope, $http) {
-    $scope.mouldProducent = ["", "Сербія", "Іспанія", "США"];
-    $scope.mouldMaterial = ["", "дерево", "МДФ"];
-    // $scope.mouldWidths = ['', 14,15,17,20,22,24,29,32,42,49,63,70,72,87,90,92];
+    $scope.mouldProducent = ["всі", "Сербія", "Іспанія", "США", "Італія", "Україна"];
+    $scope.mouldMaterial = ["всі", "дерево", "МДФ", "пластик"];
     $scope.mouldWidths = [{
         value: '',
         option: 'всі'
@@ -30,8 +29,21 @@ app.controller('mouldCtrl', function($scope, $http) {
         value: '4',
         option: '>90 mm'
     }];
-    
-    $scope.allMoulds = [];
+
+    var euroExchange = 32.5;
+    var assignWidthRange = function(obj) {
+        if (obj.width <= 25) {
+            obj.widthRange = '1';
+        } else if (obj.width > 25 && obj.width <= 50) {
+            obj.widthRange = '2';
+        } else if (obj.width > 50 && obj.width <= 90) {
+            obj.widthRange = '3';
+        } else {
+            obj.widthRange = '4';
+        }
+
+    };
+
 
 
 
@@ -42,36 +54,43 @@ app.controller('mouldCtrl', function($scope, $http) {
 
 
 
-    $http.get("assets/json/injac_katalog.json").then(function(response) {
-        $scope.serbMoulds = response.data;
-        angular.forEach($scope.serbMoulds, function(obj) {
-            obj.producent = 'Сербія';
-            obj.material = "дерево";
-        });
-        $scope.allMoulds = $scope.serbMoulds;
-        
-    });
+    $http.get("assets/json/mould_catalog.json").then(function(response) {
+        $scope.allMouldsCatalog = response.data;
 
-    $http.get("assets/json/framerica_katalog.json").then(function(response) {
-            $scope.UsaMoulds = response.data;
-            angular.forEach($scope.UsaMoulds, function(obj) {
-                obj.producent = 'США';
-                obj.material = "МДФ";
-            });
-            
-        });
-
-    $http.get("assets/json/garcia_katalog.json").then(function(response) {
-        $scope.espanaMoulds = response.data;
-        angular.forEach($scope.espanaMoulds, function(obj) {
+        $scope.allMouldsCatalog.garcia.forEach(function(obj) {
             obj.producent = 'Іспанія';
             obj.material = "дерево";
+            obj.price *= euroExchange;
         });
+        $scope.allMouldsCatalog.injac.forEach(function(obj) {
+            obj.producent = 'Сербія';
+            obj.material = "дерево";
+            obj.price *= euroExchange;
 
-
-        $scope.allMoulds = $scope.allMoulds.concat($scope.espanaMoulds, $scope.UsaMoulds);
-        /*$scope.mouldWidths = $scope.mouldWidths.concat($scope.espanaMoulds.width);
-        console.log ($scope.serbMoulds.width); */
+        });
+        $scope.allMouldsCatalog.framerica.forEach(function(obj) {
+            obj.producent = 'США';
+            obj.material = "МДФ";
+        });
+        $scope.allMouldsCatalog.esel.forEach(function(obj) {
+            obj.producent = 'Італія';
+            obj.material = "дерево";
+            obj.price *= euroExchange;
+        });
+        $scope.allMouldsCatalog.novovol.forEach(function(obj) {
+            obj.producent = 'Україна';
+            obj.material = "пластик";
+        });
+        var createArray = function() {
+            var arr = [];
+            for (var key in $scope.allMouldsCatalog) {
+                arr.push($scope.allMouldsCatalog[key]);
+            }
+            var merged = [].concat.apply([], arr);
+            return merged;
+        }
+        $scope.allMoulds = createArray();
+        
         angular.forEach($scope.allMoulds, function(obj) {
             if (obj.width <= 25) {
                 obj.widthRange = '1';
@@ -84,8 +103,11 @@ app.controller('mouldCtrl', function($scope, $http) {
             }
 
         });
+
+
+
+
     });
-    // debugger;
 
 
 
