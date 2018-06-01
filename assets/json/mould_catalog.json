@@ -149,8 +149,7 @@
 {"code":"133-11","width":11,"height":14,"price":2.49},
 {"code":"133-12","width":11,"height":14,"price":2.49},
 {"code":"147-01","width":22,"height":18,"price":4.71},
-{"code":"147-Т","width":23,"height":13,"price":4.71},
-{"code":"147Т","width":23,"height":10,"price":4.71},
+{"code":"147-T","width":23,"height":13,"price":4.71},
 {"code":"2114-993","width":48,"height":18,"price":7},
 {"code":"2114-994","width":48,"height":18,"price":7},
 {"code":"275-05","width":23,"height":20,"price":4.44},
@@ -277,8 +276,8 @@
 {"code":"85-093","width":40,"height":35,"price":230},
 {"code":"85-966","width":40,"height":35,"price":230},
 {"code":"88-059","width":50,"height":25,"price":195},
-{"code":14062,"width":35,"height":20,"price":155},
-{"code":65099,"width":30,"height":10,"price":200}
+{"code":"14062","width":35,"height":20,"price":155},
+{"code":"65099","width":30,"height":10,"price":200}
 ],
 
 "esel": [
