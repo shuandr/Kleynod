@@ -11,8 +11,8 @@ app.config(function($interpolateProvider) {
 
 
 app.controller('mouldCtrl', function($scope, $http) {
-    $scope.mouldProducent = ["всі", "Сербія", "Іспанія", "США", "Італія", "Україна"];
-    $scope.mouldMaterial = ["всі", "дерево", "МДФ", "пластик"];
+    $scope.mouldProducent = ["", "Сербія", "Іспанія", "США", "Італія", "Україна"];
+    $scope.mouldMaterial = ["", "дерево", "МДФ", "пластик"];
     $scope.mouldWidths = [{
         value: '',
         option: 'всі'
@@ -90,7 +90,7 @@ app.controller('mouldCtrl', function($scope, $http) {
             return merged;
         }
         $scope.allMoulds = createArray();
-        
+
         angular.forEach($scope.allMoulds, function(obj) {
             if (obj.width <= 25) {
                 obj.widthRange = '1';
