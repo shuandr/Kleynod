@@ -1,4 +1,4 @@
-var app = angular.module('mouldCatalog', ['ngAnimate']);
+var app = angular.module('mouldCatalog', ['ngAnimate', 'ngLocale']);
 
 
 
@@ -30,7 +30,7 @@ app.controller('mouldCtrl', function($scope, $http) {
         option: '>90 mm'
     }];
 
-    var euroExchange = 32.5;
+    var euroExchange = 33;
     var assignWidthRange = function(obj) {
         if (obj.width <= 25) {
             obj.widthRange = '1';
