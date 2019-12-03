@@ -77,10 +77,10 @@ app.controller('mouldCtrl', function($scope, $http) {
             obj.material = "дерево";
             obj.price *= euroExchange;
         });
-        $scope.allMouldsCatalog.novovol.forEach(function(obj) {
-            obj.producent = 'Україна';
-            obj.material = "пластик";
-        });
+        // $scope.allMouldsCatalog.novovol.forEach(function(obj) {
+        //     obj.producent = 'Україна';
+        //     obj.material = "пластик";
+        // });
         var createArray = function() {
             var arr = [];
             for (var key in $scope.allMouldsCatalog) {
