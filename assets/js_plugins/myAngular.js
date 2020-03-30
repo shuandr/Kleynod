@@ -6,7 +6,7 @@ app.config(function($interpolateProvider) {
 });
 
 app.controller('mouldCtrl', function($scope, $http) {
-    $scope.mouldProducent = ["", "Сербія", "Іспанія", "США", "Італія"];
+    $scope.mouldProducent = ["",  "Іспанія", "Італія", "США", "Сербія"];
     $scope.mouldMaterial = ["", "дерево", "МДФ"];
     $scope.mouldWidths = [{
         value: '',
