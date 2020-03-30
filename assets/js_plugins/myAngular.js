@@ -1,14 +1,9 @@
 var app = angular.module('mouldCatalog', ['ngAnimate', 'ngLocale']);
 
-
-
 app.config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('{[{');
     $interpolateProvider.endSymbol('}]}');
 });
-
-
-
 
 app.controller('mouldCtrl', function($scope, $http) {
     $scope.mouldProducent = ["", "Сербія", "Іспанія", "США", "Італія"];
@@ -30,7 +25,7 @@ app.controller('mouldCtrl', function($scope, $http) {
         option: '>90 mm'
     }];
 
-    var euroExchange = 33;
+    var euroExchange = 32;
     var assignWidthRange = function(obj) {
         if (obj.width <= 25) {
             obj.widthRange = '1';
@@ -44,15 +39,10 @@ app.controller('mouldCtrl', function($scope, $http) {
 
     };
 
-
-
-
     $scope.sort = function(keyname) {
         $scope.sortKey = keyname; //set the sortKey to the param passed
         $scope.reverse = !$scope.reverse; //if true make it false and vice versa
     };
-
-
 
     $http.get("assets/json/mould_catalog.json").then(function(response) {
         $scope.allMouldsCatalog = response.data;
@@ -77,10 +67,7 @@ app.controller('mouldCtrl', function($scope, $http) {
             obj.material = "дерево";
             obj.price *= euroExchange;
         });
-        // $scope.allMouldsCatalog.novovol.forEach(function(obj) {
-        //     obj.producent = 'Україна';
-        //     obj.material = "пластик";
-        // });
+        
         var createArray = function() {
             var arr = [];
             for (var key in $scope.allMouldsCatalog) {
@@ -103,16 +90,5 @@ app.controller('mouldCtrl', function($scope, $http) {
             }
 
         });
-
-
-
-
     });
-
-
-
-
-
-
-
 });
