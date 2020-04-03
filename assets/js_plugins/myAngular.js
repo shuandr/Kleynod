@@ -7,7 +7,7 @@ app.config(function($interpolateProvider) {
 
 app.controller('mouldCtrl', function($scope, $http) {
     $scope.mouldProducent = ["",  "Іспанія", "Італія", "США", "Сербія", "Польща", "Україна"];
-    $scope.mouldMaterial = ["", "дерево", "МДФ"];
+    $scope.mouldMaterial = ["", "дерево", "МДФ", "пластик" ];
     $scope.mouldWidths = [{
         value: '',
         option: 'всі'
@@ -73,7 +73,7 @@ app.controller('mouldCtrl', function($scope, $http) {
         });
         $scope.allMouldsCatalog.clever.forEach(function(obj) {
             obj.producent = 'Україна';
-            obj.material = "дерево";
+            obj.material = "пластик";
             obj.price *= euroExchange;
         });
         
