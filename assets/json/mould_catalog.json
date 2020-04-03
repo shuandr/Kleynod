@@ -319,7 +319,9 @@
 {"code":"993-03","width":30,"height":30,"price":7.5},
 {"code":"993-07","width":30,"height":30,"price":7.5}
 ],
-"werrama": [{"code":026,"width":40,"height":35,"price":242},
+
+"werrama": [
+{"code":026,"width":40,"height":35,"price":242},
 {"code":"027","width":40,"height":35,"price":242},
 {"code":"028","width":40,"height":35,"price":242},
 {"code":"029","width":40,"height":35,"price":242},
