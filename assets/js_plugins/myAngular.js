@@ -6,7 +6,7 @@ app.config(function($interpolateProvider) {
 });
 
 app.controller('mouldCtrl', function($scope, $http) {
-    $scope.mouldProducent = ["",  "Іспанія", "Італія", "США", "Сербія"];
+    $scope.mouldProducent = ["",  "Іспанія", "Італія", "США", "Сербія", "Польща", "Україна"];
     $scope.mouldMaterial = ["", "дерево", "МДФ"];
     $scope.mouldWidths = [{
         value: '',
@@ -64,6 +64,15 @@ app.controller('mouldCtrl', function($scope, $http) {
         });
         $scope.allMouldsCatalog.esel.forEach(function(obj) {
             obj.producent = 'Італія';
+            obj.material = "дерево";
+            obj.price *= euroExchange;
+        });
+        $scope.allMouldsCatalog.werrama.forEach(function(obj) {
+            obj.producent = 'Польща';
+            obj.material = "дерево";
+        });
+        $scope.allMouldsCatalog.clever.forEach(function(obj) {
+            obj.producent = 'Україна';
             obj.material = "дерево";
             obj.price *= euroExchange;
         });

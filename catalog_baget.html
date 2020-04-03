@@ -185,7 +185,7 @@
     			<div ng-repeat="x in allMoulds | orderBy:sortKey:reverse | filter: myFilter "  class="column fade">
     				<div class="mould-item">
     					<a ng-href="assets/img/catalog/baget/{[{x.code}]}.jpg" >
-    					<img ng-src="assets/img/catalog/baget/thumbs/{[{x.code}]}.jpg"/></a>
+    					<img ng-src="assets/img/catalog/baget/thumbs/{[{x.code}]}.jpg" loading="lazy"/></a>
     					<div class="row collapse  mould-item__details text-center">
     						<div class="medium-6 column">
     							<table style="width:100%; border:0px">

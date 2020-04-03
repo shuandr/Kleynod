@@ -467,7 +467,8 @@
 {"code":"роза срібна","width":50,"height":35,"price":330},
 {"code":"роза темна","width":50,"height":35,"price":330}],
 
-"clever" : [{"code":"1611-101","width":16,"height":11,"price":1.11},
+"clever" : [
+	{"code":"1611-101","width":16,"height":11,"price":1.11},
 {"code":"1611-148","width":16,"height":11,"price":1.11},
 {"code":"1611-18","width":16,"height":11,"price":1.11},
 {"code":"1611-270K","width":16,"height":11,"price":1.11},
