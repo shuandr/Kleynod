@@ -14,7 +14,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rama.lviv.ua/" />
     <link rel="stylesheet" href="assets/css/app.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/0caeff61d9.js" crossorigin="anonymous"></script>
+
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 
@@ -32,18 +34,25 @@
         <header>
             <div id="top" class="grid-x clnd-header clnd-bg align-center-middle">
                 <div class="cell  small-order-3 large-order-1 large-3 text-center brown">
-                    {[{data.address}]} <br>{[{data.schedule}]}
+                    <div class="pre">{[{data.address}]}<br>{[{data.schedule}]}</div>
+                    <div class="show-for-small-only">
+                        <a class="tel" href="tel://{[{data.tel1}]}"><i class="fas fa-phone-square"></i> {[{data.telView1}]}</a><br>
+                        <a href="viber://add?number={[{data.vbr}]}"><i class="fab fa-viber fa-2x viber" target="_blank"></i></a>
+                        <a href="https://t.me/{[{data.tlgrm}]}" target="_blank"><i class="fab fa-telegram fa-2x tlgrm"></i></a>
+                    </div>
                 </div>
                 <div class="cell small-6 medium-4 large-3 small-order-1 large-order-2 text-center">
                     <div class="main-logo ">
-                        <a href="index.html" >
+                        <a href="index.html">
                             <img src="assets/img/main-logo.svg" alt="на головну"></a>
                     </div>
                 </div>
-                <div class="cell small-6 medium-4 small-order-2 large-order-3  large-3 text-center">
-                    <a class="tel" href="tel://{[{data.tel1}]}"><i class="fa fa-phone-square"></i> {[{data.telView1}]}</a><br>
-                    <a class="tel" href="tel://{[{data.tel2}]}"><i class="fa fa-phone-square"></i> {[{data.telView2}]}</a><br>
-                    <a class="tel" href="tel://{[{data.tel3}]}"><i class="fa fa-phone-square"></i> {[{data.telView3}]}</a>
+                <div class="cell show-for-medium medium-4 small-order-2 large-order-3  large-3 text-center">
+                    <a class="tel" href="tel://{[{data.tel1}]}"><i class="fas fa-phone-square"></i> {[{data.telView1}]}</a><br>
+                    <a class="tel" href="tel://{[{data.tel2}]}"><i class="fas fa-phone-square"></i> {[{data.telView2}]}</a><br>
+                    <a class="tel" href="tel://{[{data.tel3}]}"><i class="fas fa-phone-square"></i> {[{data.telView3}]}</a><br>
+                    <a href="viber://chat?number={[{data.vbr}]}" target="_blank"><i class="fab fa-viber fa-2x viber"></i></a>
+                    <a href="https://t.me/{[{data.tlgrm}]}" target="_blank"><i class="fab fa-telegram fa-2x tlgrm"></i></a>
                 </div>
             </div>
             <div class="coat-of-arm show-for-medium">
@@ -56,7 +65,7 @@
             <div class="clnd-white-wrapper">
                 <div class="grid-x grid-padding-x align-center">
                     <div class="cell medium-11 large-10 xlarge-8 text-center">
-                        <p>{[{data.passepartout.text}]}</p>
+                        <p class="pre">{[{data.passepartout.text}]}</p>
                     </div>
                 </div>
             </div>
@@ -78,9 +87,11 @@
                     <p>{[{data.address}]}</p>
                     <p><a class="tel" href="tel://{[{data.tel1}]}"><i class="fa fa-phone-square"></i> {[{data.telView1}]}</a><br>
                         <a class="tel" href="tel://{[{data.tel2}]}"><i class="fa fa-phone-square"></i> {[{data.telView2}]}</a><br>
-                        <a class="tel" href="tel://{[{data.tel3}]}"><i class="fa fa-phone-square"></i> {[{data.telView3}]}</a></p>
-                    <p><a href="mailto:{[{data.email}]}"> {[{data.email}]}</a></p>
-                    <p>{[{data.schedule}]} <br>Неділя — вихідний</p> <br>
+                        <a class="tel" href="tel://{[{data.tel3}]}"><i class="fa fa-phone-square"></i> {[{data.telView3}]}</a><br>
+                    <a href="viber://chat?number={[{data.vbr}]}" target="_blank"><i class="fab fa-viber fa-2x viber"></i></a>
+                        <a href="https://t.me/{[{data.tlgrm}]}" target="_blank"><i class="fab fa-telegram fa-2x tlgrm"></i></a></p>
+                    <p><a href="mailto:{[{data.email}]}" target="_blank"> {[{data.email}]}</a></p>
+                    <p class="pre">{[{data.schedule}]}<br>Неділя — вихідний</p> <br>
                     <a href="https://www.facebook.com/{[{data.fb}]}/" target="_blank">
                         <i class="fa fa-facebook-square fa-2x"></i></a>
                     <a href="https://www.instagram.com/{[{data.insta}]}/" target="_blank"> <i class="fa fa-instagram fa-2x"></i></a>
@@ -124,7 +135,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
     <script src="assets/js_plugins/myAngular.js"></script>
     <script src="assets/js/app.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
     (function(i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
