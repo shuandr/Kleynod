@@ -93,157 +93,159 @@
         </div>
         <div class="grid-container fluid">
             <div class="grid-x grid-margin-x  align-center">
-                <div class="cell carton-hole  xlarge-10">
+                <div class="cell carton-hole large-10  xlarge-9 brown text-center">
                     <div class="clnd-white-bg"></div>
-                    <div class="interior"> </div>
-                    <div class="grid-x grid-padding-x grid-padding-y align-center ">
-                        <div class="cell large-9  brown text-center">
-                            <p class="pre">{[{data.aboutUs.text}]}</p>
+                    <div class="founders">
+                        <div class="slide">
+                            <div class="founders-1"></div>
+                        </div>
+                        <div class="slide">
+                            <div class="founders-2"></div>
+                        </div>
+                    </div><br>
+                    <p class="pre">{[{data.aboutUs.text}]}</p>
+                </div>
+            </div><br>
+            <!-- CERT -->
+            <div class="clnd-title">
+                <h2 class="uppercase brown text-center">{[{data.cert.title}]}</h2>
+            </div>
+            <div class="grid-container ">
+                <div class="grid-x grid-padding-x grid-padding-y  align-center-middle">
+                    <div class="cell large-5 text-center ">
+                        <img src="assets/img/{[{data.cert.img}]}.png" alt="">
+                    </div>
+                    <div class="cell carton-hole large-7 brown text-center clnd-white-bg">
+                        <p class="pre">{[{data.cert.text}]}</p>
+                    </div>
+                </div>
+            </div><br>
+            <!-- CUSTOM FRAMES -->
+            <div class="clnd-title">
+                <h2 class="uppercase brown text-center">{[{data.customFrames.title}]}</h2>
+            </div>
+            <div class="grid-container fluid">
+                <div class="grid-x grid-margin-x  ">
+                    <div class="cell carton-hole  ">
+                        <div class="clnd-white-bg"></div>
+                        <div class="grid-x grid-padding-x grid-padding-y align-center ">
+                            <div class="cell large-9  brown text-center">
+                                <p class="pre">{[{data.customFrames.text}]}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><br>
-        <!-- CERT -->
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.cert.title}]}</h2>
-        </div>
-        <div class="grid-container ">
-            <div class="grid-x grid-padding-x grid-padding-y  align-center-middle">
-                <div class="cell large-5 text-center ">
-                    <img src="assets/img/{[{data.cert.img}]}.png" alt="">
-                </div>
-                <div class="cell carton-hole large-7 brown text-center clnd-white-bg">
-                    <p class="pre">{[{data.cert.text}]}</p>
+            <div class="clnd-white-wrapper">
+                <div class="slider">
+                    <img ng-repeat="slide in data.customFrames.img" src="assets/img/custom-frames/{[{slide}]}.jpg" alt="">
                 </div>
             </div>
-        </div><br>
-        <!-- CUSTOM FRAMES -->
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.customFrames.title}]}</h2>
-        </div>
-        <div class="grid-container fluid">
-            <div class="grid-x grid-margin-x  ">
-                <div class="cell carton-hole  ">
-                    <div class="clnd-white-bg"></div>
-                    <div class="grid-x grid-padding-x grid-padding-y align-center ">
-                        <div class="cell large-9  brown text-center">
-                            <p class="pre">{[{data.customFrames.text}]}</p>
+            <br>
+            <!-- GRAPHICS -->
+            <div class="clnd-title">
+                <h2 class="uppercase brown text-center">{[{data.reproGraphics.title}]}</h2>
+            </div>
+            <div class="grid-container fluid ">
+                <div class="grid-x grid-margin-x  ">
+                    <div class="cell carton-hole  ">
+                        <div class="clnd-white-bg"></div>
+                        <div class="grid-x grid-padding-x grid-padding-y align-center ">
+                            <div class="cell large-10 xlarge-8  brown text-center">
+                                <p class="pre ">{[{data.reproGraphics.text}]}</p>
+                                <h5>{[{data.reproGraphics.sub}]}</h5>
+                                <ul class=" text-left">
+                                    <li ng-repeat="item in data.reproGraphics.list">{[{item}]}</li>
+                                </ul>
+                                <h6 class="bold ">
+                                    <a class="dark-gold" href="https://issuu.com/kleynod/docs/catalog_screen_150dpi" target="_blank">Всю колекцію репродукцій можна переглянути у каталозі на
+                                        <img src="assets/img/issuu-logo.png" alt=""></a>
+                                </h6>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="clnd-white-wrapper">
-            <div class="slider">
-                <img ng-repeat="slide in data.customFrames.img" src="assets/img/custom-frames/{[{slide}]}.jpg" alt="">
+            <div class="clnd-white-wrapper">
+                <div class="slider">
+                    <img ng-repeat="slide in data.reproGraphics.img" src="assets/img/historic-graphics/{[{slide}]}.jpg" alt="">
+                </div>
+            </div><br>
+            <!-- FURNITURE -->
+            <div class="clnd-title">
+                <h2 class="uppercase brown text-center">{[{data.furniture.title}]}</h2>
             </div>
-        </div>
-        <br>
-        <!-- GRAPHICS -->
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.reproGraphics.title}]}</h2>
-        </div>
-        <div class="grid-container fluid ">
-            <div class="grid-x grid-margin-x  ">
-                <div class="cell carton-hole  ">
-                    <div class="clnd-white-bg"></div>
-                    <div class="grid-x grid-padding-x grid-padding-y align-center ">
-                        <div class="cell large-10 xlarge-8  brown text-center">
-                            <p class="pre ">{[{data.reproGraphics.text}]}</p>
-                            <h5>{[{data.reproGraphics.sub}]}</h5>
-                            <ul class=" text-left">
-                                <li ng-repeat="item in data.reproGraphics.list">{[{item}]}</li>
-                            </ul>
-                            <h6 class="bold ">
-                                <a class="dark-gold" href="https://issuu.com/kleynod/docs/catalog_screen_150dpi" target="_blank">Всю колекцію репродукцій можна переглянути у каталозі на 
-                                    <img src="assets/img/issuu-logo.png" alt="" ></a>
-                            </h6>
+            <div class="grid-container fluid">
+                <div class="grid-x grid-margin-x  ">
+                    <div class="cell carton-hole  ">
+                        <div class="clnd-white-bg"></div>
+                        <div class="grid-x grid-padding-x grid-padding-y align-center ">
+                            <div class="cell large-9  brown text-center">
+                                <p class="pre">{[{data.furniture.text}]}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="clnd-white-wrapper">
-            <div class="slider">
-                <img ng-repeat="slide in data.reproGraphics.img" src="assets/img/historic-graphics/{[{slide}]}.jpg" alt="">
-            </div>
-        </div><br>
-        <!-- FURNITURE -->
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.furniture.title}]}</h2>
-        </div>
-        <div class="grid-container fluid">
-            <div class="grid-x grid-margin-x  ">
-                <div class="cell carton-hole  ">
-                    <div class="clnd-white-bg"></div>
-                    <div class="grid-x grid-padding-x grid-padding-y align-center ">
-                        <div class="cell large-9  brown text-center">
-                            <p class="pre">{[{data.furniture.text}]}</p>
-                        </div>
+            <div class="clnd-white-wrapper">
+                <div class="slider">
+                    <img ng-repeat="slide in data.furniture.img" src="assets/img/expo-furniture/{[{slide}]}.jpg" alt="">
+                </div>
+            </div><br>
+            <footer class="clnd-footer">
+                <div class=" footer-divider"></div>
+                <div class="grid-x grid-padding-x ">
+                    <div class="cell medium-7 large-9">
+                        <div id="google-map" style="width:100%;height:400px; border:1px solid #a00"></div>
+                    </div>
+                    <div class="cell medium-5 large-3 address">
+                        <p>{[{data.address}]}</p>
+                        <p><a class="tel" href="tel://{[{data.tel1}]}"><i class="fas fa-phone-square"></i> {[{data.telView1}]}</a><br>
+                            <a class="tel" href="tel://{[{data.tel2}]}"><i class="fas fa-phone-square"></i> {[{data.telView2}]}</a><br>
+                            <a class="tel" href="tel://{[{data.tel3}]}"><i class="fas fa-phone-square"></i> {[{data.telView3}]}</a><br>
+                        <a href="viber://chat?number={[{data.vbr}]}" target="_blank"><i class="fab fa-viber fa-2x viber"></i></a>
+                            <a href="https://t.me/{[{data.tlgrm}]}" target="_blank"><i class="fab fa-telegram fa-2x tlgrm"></i></a></p>
+                        <p><a href="mailto:{[{data.email}]}" target="_blank"> {[{data.email}]}</a></p>
+                        <p class="pre">{[{data.schedule}]}<br>Неділя — вихідний</p> <br>
+                        <a href="https://www.facebook.com/{[{data.fb}]}/" target="_blank">
+                            <i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a href="https://www.instagram.com/{[{data.insta}]}/" target="_blank"> <i class="fab fa-instagram fa-2x"></i></a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="clnd-white-wrapper">
-            <div class="slider">
-                <img ng-repeat="slide in data.furniture.img" src="assets/img/expo-furniture/{[{slide}]}.jpg" alt="">
-            </div>
-        </div><br>
-        <footer class="clnd-footer">
-            <div class=" footer-divider"></div>
-            <div class="grid-x grid-padding-x ">
-                <div class="cell medium-7 large-9">
-                    <div id="google-map" style="width:100%;height:400px; border:1px solid #a00"></div>
-                </div>
-                <div class="cell medium-5 large-3 address">
-                    <p>{[{data.address}]}</p>
-                    <p><a class="tel" href="tel://{[{data.tel1}]}"><i class="fas fa-phone-square"></i> {[{data.telView1}]}</a><br>
-                        <a class="tel" href="tel://{[{data.tel2}]}"><i class="fas fa-phone-square"></i> {[{data.telView2}]}</a><br>
-                        <a class="tel" href="tel://{[{data.tel3}]}"><i class="fas fa-phone-square"></i> {[{data.telView3}]}</a><br>
-                    <a href="viber://chat?number={[{data.vbr}]}" target="_blank"><i class="fab fa-viber fa-2x viber"></i></a>
-                        <a href="https://t.me/{[{data.tlgrm}]}" target="_blank"><i class="fab fa-telegram fa-2x tlgrm"></i></a></p>
-                    <p><a href="mailto:{[{data.email}]}" target="_blank"> {[{data.email}]}</a></p>
-                    <p class="pre">{[{data.schedule}]}<br>Неділя — вихідний</p> <br>
-                    <a href="https://www.facebook.com/{[{data.fb}]}/" target="_blank">
-                        <i class="fab fa-facebook-square fa-2x"></i></a>
-                    <a href="https://www.instagram.com/{[{data.insta}]}/" target="_blank"> <i class="fab fa-instagram fa-2x"></i></a>
-                </div>
-            </div>
-        </footer>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfuN7UgfDB2RfqBeNIZ1S_rpZ6HU-GKYU"></script>
-        <script>
-        var myCenterLviv = new google.maps.LatLng(49.838626, 24.025951);
-        
-        var myPin = 'assets/img/map-pin.png';
-        
-        function initialize() {
-            var mapPropLviv = {
-                zoomControl: true,
-                scrollwheel: false,
-                center: myCenterLviv,
-                zoom: 17,
-                disableDefaultUI: true,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-        
-        
-        
-            var mapLviv = new google.maps.Map(document.getElementById("google-map"), mapPropLviv);
-        
-        
-            var myMarker = new google.maps.Marker({
-                position: myCenterLviv,
-                icon: myPin,
-                map: mapLviv,
-                title: 'вул. Коперника,20'
-            });
-        
-        
-        }
-        
-        google.maps.event.addDomListener(window, 'load', initialize);
-        </script></div>
+            </footer>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfuN7UgfDB2RfqBeNIZ1S_rpZ6HU-GKYU"></script>
+            <script>
+            var myCenterLviv = new google.maps.LatLng(49.838626, 24.025951);
+            
+            var myPin = 'assets/img/map-pin.png';
+            
+            function initialize() {
+                var mapPropLviv = {
+                    zoomControl: true,
+                    scrollwheel: false,
+                    center: myCenterLviv,
+                    zoom: 17,
+                    disableDefaultUI: true,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+            
+            
+            
+                var mapLviv = new google.maps.Map(document.getElementById("google-map"), mapPropLviv);
+            
+            
+                var myMarker = new google.maps.Marker({
+                    position: myCenterLviv,
+                    icon: myPin,
+                    map: mapLviv,
+                    title: 'вул. Коперника,20'
+                });
+            
+            
+            }
+            
+            google.maps.event.addDomListener(window, 'load', initialize);
+            </script>    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
