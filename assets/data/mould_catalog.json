@@ -155,6 +155,7 @@
 {"code":"255-381","width":20,"height":30,"price":6.4},
 {"code":"3020-314","width":30,"height":20,"price":5.5},
 {"code":"3020-325","width":30,"height":20,"price":5.5},
+{"code":"3016-001","width":30,"height":15,"price":5.3},
 {"code":"3484-1","width":48,"height":28,"price":13.8},
 {"code":"3484-2","width":48,"height":28,"price":13.8},
 {"code":"3484-3","width":48,"height":28,"price":13.8},
@@ -169,12 +170,14 @@
 {"code":"4337-1","width":70,"height":28,"price":20.2},
 {"code":"4337-3","width":70,"height":28,"price":20.2},
 {"code":"4435-52","width":44,"height":35,"price":12.5},
-
+{"code":"4555-601","width":45,"height":55,"price":16.9},
+{"code":"4555-602","width":45,"height":55,"price":16.9},
 {"code":"4920-3","width":49,"height":20,"price":9.8},
 {"code":"4920-5","width":49,"height":20,"price":9.8},
 {"code":"607-L1","width":70,"height":45,"price":30.1},
 {"code":"607-L2","width":70,"height":45,"price":30.1},
-
+{"code":"715-001","width":20,"height":20,"price":5.8},
+{"code":"715-002","width":20,"height":20,"price":5.8}
 {"code":"715-606","width":20,"height":20,"price":5.8},
 {"code":"715-607","width":20,"height":20,"price":5.8},
 {"code":"715-629","width":20,"height":20,"price":5.8},
