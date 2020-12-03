@@ -32,7 +32,7 @@ app.controller('mouldCtrl', function($scope, $http) {
         option: '>90 mm'
     }];
 
-    var euroExchange = 32;
+    var euroExchange = 34.5;
     var assignWidthRange = function(obj) {
         if (obj.width <= 25) {
             obj.widthRange = '1';
