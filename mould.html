@@ -39,21 +39,20 @@
                     <div class="cell">
                         <img src="assets/img/baget/{[{selectedMould.code}]}.jpg" alt="">
                     </div>
-                    <div class="cell white-bg dark-gold text-center" style="padding: 2vh;">
-                        <table style="width:100%; border:0px">
-                            <tr class="mould-item-labels">
-                                <th>{[{data.mouldCat.mouldLabels[0]}]}</th>
-                                <th>{[{data.mouldCat.mouldLabels[1]}]}</th>
-                                <th>{[{data.mouldCat.mouldLabels[2]}]}</th>
-                                <th class="text-right">{[{data.mouldCat.mouldLabels[3]}]}</th>
-                            </tr>
-                            <tr>
-                                <td>{[{selectedMould.width}]} mm</td>
-                                <td>{[{selectedMould.height}]} mm</td>
-                                <td class="item_code">{[{selectedMould.code}]}</td>
-                                <td class="item_price">{[{selectedMould.price | currency : "" : 0 }]}</td>
-                            </tr>
-                        </table>
+                    <div class="cell">
+                        <div class="mould-item-descr white-bg dark-gold text-center">
+                            <table>
+                                <tr class="mould-item-labels">
+                                    <th ng-repeat="x in data.mouldCat.mouldLabels">{[{x}]}</th>
+                                </tr>
+                                <tr>
+                                    <td>{[{selectedMould.width}]} mm</td>
+                                    <td>{[{selectedMould.height}]} mm</td>
+                                    <td class="item_code">{[{selectedMould.code}]}</td>
+                                    <td class="item_price">{[{selectedMould.price | currency : "" : 0 }]}</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
