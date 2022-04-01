@@ -26,13 +26,14 @@
     <meta name="msapplication-TileColor" content="#480000">
     <meta name="theme-color" content="#ffffff">
     <script src="https://kit.fontawesome.com/0caeff61d9.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
     <div ng-app="kleynod" ng-controller="kleynodCtrl">
         <div id="preloader" class="grid-x clnd-bg align-center-middle">
             <div class="cell" id="pre-logo">
-                <img src="assets/img/main-logo.svg" alt="">
+                <img src="assets/img/main-logo-UA.svg" alt="">
             </div>
         </div>
         <div style="position: relative;">
@@ -41,6 +42,7 @@
         </div>
         <header>
             <div id="top" class="grid-x clnd-header clnd-bg align-center-middle">
+                <div  class="lang-select s-bold" ng-click="changeLang()">{[{setLang}]}</div>
                 <div class="cell  small-order-3 large-order-1 large-3 text-center brown">
                     <div class="pre">{[{data.address}]}<br>{[{data.schedule}]}</div>
                     <div class="show-for-small-only">
@@ -49,10 +51,10 @@
                         <a href="https://t.me/{[{data.tlgrm}]}" target="_blank"><i class="fab fa-telegram fa-2x tlgrm"></i></a>
                     </div>
                 </div>
-                <div class="cell small-6 medium-4 large-3 small-order-1 large-order-2 text-center">
+                <div class="cell small-8 medium-4 large-3 small-order-1 large-order-2 text-center">
                     <div class="main-logo ">
                         <a href="index.html">
-                            <img src="assets/img/main-logo.svg" alt="на головну"></a>
+                            <img src="assets/img/{[{data.logoImg}]}" alt="на головну"></a>
                     </div>
                 </div>
                 <div class="cell show-for-medium medium-4 small-order-2 large-order-3  large-3 text-center">
@@ -65,7 +67,7 @@
             <div class="coat-of-arm show-for-medium">
                 <img src="assets/img/coat_of_arm.png" alt="">
             </div>
-        </header> <!-- <div class="off-canvas-wrapper"> -->
+        </header>    <!-- <div class="off-canvas-wrapper"> -->
         <!--        OFF-CANVAS about-us -->
         <!-- CONTENT -->
         <!-- <div class="off-canvas-content" data-off-canvas-content> -->
@@ -73,7 +75,7 @@
         <div class="grid-x grid-padding-x  small-up-2  large-up-4">
             <div class="cell " ng-repeat="link in data.mainLinks" style="padding-top: 1.4rem">
                 <a href="{[{link.url}]}.html">
-                    <img src="assets/img/main-link-{[{link.id}]}.png" alt="{[{link.alt}]}">
+                    <img src="assets/img/main-link-{[{link.id}]}.webp" alt="{[{link.alt}]}">
                 </a>
             </div>
         </div><br>
@@ -81,7 +83,7 @@
         <div class="grid-x clnd-white-wrapper align-center">
             <div class="cell divider"></div>
             <div class="cell large-9 text-center slogan">
-                <img src="assets/img/slogan.svg" width=78% alt="оправа творів мистецтва — це також мистецтво">
+                <img src="assets/img/{[{data.slogan}]}" width=78% alt="оправа творів мистецтва — це також мистецтво">
             </div>
             <div class="cell divider" style="transform: rotate(180deg);"></div>
         </div>
@@ -156,7 +158,7 @@
                                     <li ng-repeat="item in data.reproGraphics.list">{[{item}]}</li>
                                 </ul>
                                 <h6 class="bold ">
-                                    <a class="dark-gold" href="https://issuu.com/kleynod/docs/catalog_screen_150dpi" target="_blank">Всю колекцію репродукцій можна переглянути у каталозі на
+                                    <a class="dark-gold" href="https://issuu.com/kleynod/docs/catalog_screen_150dpi" target="_blank">{[{data.reproGraphics.catalogIntro}]}
                                         <img src="assets/img/issuu-logo.png" alt=""></a>
                                 </h6>
                             </div>
@@ -200,10 +202,10 @@
                         <p>{[{data.address}]}</p>
                         <p><a class="tel" href="tel://{[{data.tel1}]}"><i class="fas fa-phone-square"></i> {[{data.telView1}]}</a><br>
                             <a class="tel" href="tel://{[{data.tel2}]}"><i class="fas fa-phone-square"></i> {[{data.telView2}]}</a><br>
-                            <a href="viber://chat?number={[{data.vbr}]}" target="_blank"><i class="fab fa-viber fa-2x viber"></i></a>
+                        <a href="viber://chat?number={[{data.vbr}]}" target="_blank"><i class="fab fa-viber fa-2x viber"></i></a>
                             <a href="https://t.me/{[{data.tlgrm}]}" target="_blank"><i class="fab fa-telegram fa-2x tlgrm"></i></a></p>
                         <p><a href="mailto:{[{data.email}]}" target="_blank"> {[{data.email}]}</a></p>
-                        <p class="pre">{[{data.schedule}]}<br>Неділя — вихідний</p> <br>
+                        <p class="pre">{[{data.schedule}]}</p> <br>
                         <a href="https://www.facebook.com/{[{data.fb}]}/" target="_blank">
                             <i class="fab fa-facebook-square fa-2x"></i></a>
                         <a href="https://www.instagram.com/{[{data.insta}]}/" target="_blank"> <i class="fab fa-instagram fa-2x"></i></a>
@@ -213,9 +215,9 @@
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfuN7UgfDB2RfqBeNIZ1S_rpZ6HU-GKYU"></script>
             <script>
             var myCenterLviv = new google.maps.LatLng(49.838626, 24.025951);
-
+            
             var myPin = 'assets/img/map-pin.png';
-
+            
             function initialize() {
                 var mapPropLviv = {
                     zoomControl: true,
@@ -225,46 +227,45 @@
                     disableDefaultUI: true,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
-
-
-
+            
+            
+            
                 var mapLviv = new google.maps.Map(document.getElementById("google-map"), mapPropLviv);
-
-
+            
+            
                 var myMarker = new google.maps.Marker({
                     position: myCenterLviv,
                     icon: myPin,
                     map: mapLviv,
                     title: 'вул. Коперника,20'
                 });
-
-
+            
+            
             }
-
+            
             google.maps.event.addDomListener(window, 'load', initialize);
-            </script>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
-        <script src="assets/js_plugins/myAngular.js"></script>
-        <script src="assets/js/app.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-82329311-1', 'auto');
-        ga('send', 'pageview');
-        </script>
+            </script>    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+    <script src="assets/js_plugins/myAngular.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-82329311-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 </body>
 
 </html>

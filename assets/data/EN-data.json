@@ -1,0 +1,159 @@
+{
+    "address": "20 Kopernika str., Lviv, Ukraine",
+    "tel1": "+380505329482",
+    "telView1": "050-53-29-482",
+    "tel2": "+380685299974",
+    "telView2": "068-52-999-74",
+    "tel3": " ",
+    "telView3": " ",
+    "vbr": "%2B380685299974",
+    "tlgrm": "kleynodlviv",
+    "email": "kleynod.lviv@gmail.com",
+    "schedule": "Mo-Fr: 10:00—18:30,  \nSa: 10:00—15:00",
+
+    "logoImg": "main-logo-EN.svg",
+    "slogan": "slogan-EN.svg",
+
+
+    "fb": "kleynod.lviv",
+    "insta": "kleynod_framegallery",
+    "mail": "kleynod.lviv@gmail.com",
+    "mainLinks": [
+    {
+        "id": "EN-1",
+        "url": "https://shop.rama.lviv.ua/index",
+        "alt": "shop"
+    },
+    {
+        "id": "EN-2",
+        "url": "portfolio",
+        "alt": "Services & portfolio"
+    },
+    {
+        "id": "EN-3",
+        "url": "catalog_baget",
+        "alt": "mouldings collection"
+    },
+    {
+        "id": "EN-4",
+        "url": "catalog_passepartou",
+        "alt": "Passepartout collection"
+    }],
+    "aboutUs":
+    {
+        "title": "about us",
+        "text": "Kleynod Frame Gallery is a family business inspired by art. \nOur job is to create beautiful interior items that are pleasing to the eye and joy. \nOur frame workshop has been operating in Lviv since 2003, and our regular customers include well-known artists, collectors, museums and galleries. \nWe will professionally help you choose the design and perform it efficiently."
+    },
+    "cert":
+    {
+        "title": "gift certificate",
+        "text": "Our gift certificate for painting, photo and mirror design services is an ideal gift for people who appreciate art, are creative or want to create comfort at home. \nThe minimum certificate price is UAH 500. \nCall, visit or email us to purchase a certificate",
+        "img": "cert"
+    },
+    "customFrames":
+    {
+        "title": "frames on demand",
+        "text": "We make exclusive frames for mirrors and works of art. \nOval, round, arched frames with modern design and in different historical styles. \nMirror or painting in a round or oval frame with rich carvings, gilding or in a contemporary style will be a impressive accent of a exquisite interior",
+        "img": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+    },
+    "furniture":
+    {
+        "title": "Exhibition furniture",
+        "text": "We make original furniture from natural wood (oak) for exhibition of works of art. \nA large easel (more than 2 m high) is an exclusive interior design item. Designed to display paintings, graphics, maps, etc. in galleries, museums, restaurants, offices, conference rooms & receptions. \nSmall easel (height about 40 cm) is used to display works of art of small size. \nStand (height — 1.5 m) for the sculpture exposition. All details (dimensions, style, plastic ornamental elements, quantity, price ...) are discussed individually",
+
+        "img": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+    },
+    "reproGraphics":
+    {
+        "title": "Reproductions of historical graphics",
+        "text": "We offer high-quality reproductions of graphics and paintings, as well as photographs of Lviv in the late XIX — early XX century, which we can print at your desired size. Such images may be a decoration in the office, living room, conference hall or an interesting souvenir for guests of Lviv.",
+        "sub": "Our collection of reproductions:",
+        "catalogIntro": "The entire collection of reproductions can be viewed in the catalog at:",
+
+        "list": [
+        "series of lithographs by Karol Auer \"Lviv and its environs\" 1837-1838 (29 lithographs) "," lithographs by Anton Lange \"View of the city of Lviv from the Wronowski Mountains", "lithographs by Franz Hogenberg\"Leopolis \"", "series of lithographs by Napoleon Orda, XIX century . (architectural landscapes of Ukraine)","collection of autolithographs \"Lwow\" by Odia Dobrovolsky, 1914-1915","graphics by Luka Dolynsky \"Lion - Prince of Galicia", "45 photographs of Lviv in the late nineteenth - early twentieth century"
+        ],
+        "img": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    },
+    "painting":
+    {
+        "title": "Painting framing",
+        "text": "For the frame of paintings we offer a wide selection of mouldings of different styles: from modern flat mouldings to wide with a complex profile and luxurious ornaments. For a particularly rich design, it is possible to make a frame of several mouldings. \nWork on subframes can be framed in a tall moulding that completely covers the sides of the subframe. \nSmall works can be visually expanded with a cardboard passepartout and decorated with slips.",
+        
+        "img": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14]
+
+    },
+    "graphics":
+    {
+        "title": "graphics framing",
+        "text": "Graphic works are usually framed using a passe-partout, which visually expands the picture. Our masters professionally perform passe-partout cutting of various shapes: square, rectangle, oval, circle, arch. We always have a wide palette of passe-partout with paper, fabric and velvet coating. \nWe often use several layers of passe-partout to frame the graphics, separating them with a slip (decorative insert). For protection of work outside we use transparent or anti-glare glass, plastic (plexiglass). \nGraphic works are also may be framed in the so-called \"anti-frame\" — a mat with glass on top, which is fastened with special clips (without frame).",
+        
+        "img": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    },
+    "mirrors":
+    {
+        "title": "mirror framing",
+        "text": "We offer a mirror framing for your home or office. We can frame your own mirror or order for you a mirror of the necessary size and thickness (4 mm or 6 mm) with or without a facet. \nA large collection of moulding in different styles and colors allows you to get the perfect mirror for any interior.",
+       
+        "img": [1, 2, 3, 4]
+
+    },
+    "embroidery":
+    {
+        "title": "embroidery and tapestries framing",
+        "text": "One of the our specializations is the stretching and framing of embroidery and tapestries. To protect embroideries from dust, we offer clear or anti-glare glass. \nWe have a large collection of mouldings and passe-partouts that will satisfy any customer.",
+        "img": [1, 2, 3, 4, 5, 6, 7]
+
+    },
+    "photos":
+    {
+        "title": "photographs framing",
+        "text": "We will help you choose and make a harmonious design for your family, wedding photos, portraits, photo landscapes, etc. \nIn addition to the ordinary photo framing with mat and frame, we can make a photo-collage (several photos are arranged within one frame) or a composition of individually framed photos.",
+        "img": [1, 2, 3, 4, 5]
+
+    },
+    "customItems":
+    {
+        "title": "3d items framing",
+        "text": "Medals, coins, clothes, music records or CDs, other small items in our framing will be unique interior accent.",
+        "img": [1, 2, 3, 4, 5]
+
+    },
+    "passepartout":
+    {
+        "title": "passepartout collection",
+        "text": "We always have a wide range of colors of high-quality cardboard passe-partout from Koninklijke Moorman Karton (Netherlands) and other manufacturers. \nAs well as the museum's acid-free passe-partout 2.25 mm thick for valuable and antique works. \nWe also sell passe-partout-cardboard sheets (wholesale). We provide information on availability and prices by phone, e-mail, viber / telegram.",
+        "img": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15]
+
+    },
+    "mouldCat": {
+        "title": "mouldings collection",
+        "sortLabels": ["producer", "material", "width", "code"],
+        "sortParam": ["price", "width", "code"],
+
+        "mouldProducent": [
+            {"id": "", "option": "all"},
+            {"id": "es", "option": "Spain"},
+            {"id": "it", "option": "Italy"},
+            {"id": "us", "option": "USA"},
+            {"id": "sr", "option": "Serbia"},
+            {"id": "pl", "option": "Poland"},
+            {"id": "ua", "option": "Ukraine"}
+        ],
+        "mouldMaterial": [
+            {"id": "", "option": "all"},
+            {"id": "w", "option": "wood"},
+            {"id": "m", "option": "MDF"},
+            {"id": "p", "option": "plastic"}
+        ],
+
+        "mouldLabels": ["width", "height", "code", "price, UAH"]
+
+    }
+
+
+}

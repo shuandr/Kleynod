@@ -33,7 +33,7 @@
     <div ng-app="mouldCatalog" ng-controller="mouldCtrl">
         <div id="preloader" class="grid-x clnd-bg align-center-middle">
             <div class="cell" id="pre-logo">
-                <img src="assets/img/main-logo.svg" alt="">
+                <img src="assets/img/main-logo-UA.svg" alt="">
             </div>
         </div>
         <div style="position: relative;">
@@ -42,6 +42,7 @@
         </div>
         <header>
             <div id="top" class="grid-x clnd-header clnd-bg align-center-middle">
+                <div  class="lang-select s-bold" ng-click="changeLang()">{[{setLang}]}</div>
                 <div class="cell  small-order-3 large-order-1 large-3 text-center brown">
                     <div class="pre">{[{data.address}]}<br>{[{data.schedule}]}</div>
                     <div class="show-for-small-only">
@@ -50,10 +51,10 @@
                         <a href="https://t.me/{[{data.tlgrm}]}" target="_blank"><i class="fab fa-telegram fa-2x tlgrm"></i></a>
                     </div>
                 </div>
-                <div class="cell small-6 medium-4 large-3 small-order-1 large-order-2 text-center">
+                <div class="cell small-8 medium-4 large-3 small-order-1 large-order-2 text-center">
                     <div class="main-logo ">
                         <a href="index.html">
-                            <img src="assets/img/main-logo.svg" alt="на головну"></a>
+                            <img src="assets/img/{[{data.logoImg}]}" alt="на головну"></a>
                     </div>
                 </div>
                 <div class="cell show-for-medium medium-4 small-order-2 large-order-3  large-3 text-center">
@@ -73,31 +74,34 @@
         </div>
         <div id="catalog-baget">
             <div class="clnd-title">
-                <h2 class="uppercase brown text-center">колекція багету</h2>
+                <h2 class="uppercase brown text-center">{[{data.mouldCat.title}]}</h2>
             </div>
         </div>
         <!-- GRID -->
         <div class="grid-x grid-padding-x  small-up-1 medium-up-2 large-up-4 xxlarge-up-5 align-center align-bottom">
-            <div class="cell">виробник:
-                <select ng-model="myFilter.producent" ng-options="x for x in mouldProducent">
+            <div class="cell">{[{data.mouldCat.sortLabels[0]}]}:
+                <select ng-model="myFilter.producent">
+                    <option ng-repeat="x in mouldProducent" ng-value="x.id">{[{x.option}]}</option>
                 </select>
             </div>
-            <div class="cell">матеріал:
-                <select ng-model="myFilter.material" ng-options="x for x in mouldMaterial">
+            <div class="cell">{[{data.mouldCat.sortLabels[1]}]}:
+                <select ng-model="myFilter.material">
+                    <option ng-repeat="x in mouldMaterial" ng-value="x.id">{[{x.option}]}</option>
+                
                 </select>
             </div>
-            <div class="cell">ширина:
+            <div class="cell">{[{data.mouldCat.sortLabels[2]}]}:
                 <select ng-model="myFilter.widthRange">
-                    <option ng-repeat="item in mouldWidths" ng-value="item.value">{[{item.option}]}</option>
+                    <option ng-repeat="x in mouldWidths" ng-value="x.value">{[{x.option}]}</option>
                 </select>
             </div>
-            <div class="cell">код багету:
+            <div class="cell">{[{data.mouldCat.sortLabels[3]}]}:
                 <input type="text" ng-model="myFilter.code">
             </div>
             <div class=" cell">
-                <button type="button" class="small  button sort-btn" ng-click="sort('price')">за ціною <i class=" fa fa-sort-amount-asc"></i></button>
-                <button type="button" class="small  button sort-btn" ng-click="sort('width')">за шириною <i class=" fa fa-sort-amount-asc"></i></button>
-                <button type="button" class="small  button sort-btn" ng-click="sort('code')">за кодом <i class=" fa fa-sort-amount-asc"></i></button>
+                <button type="button" class="small  button sort-btn" ng-click="sort('price')">{[{data.mouldCat.sortParam[0]}]} <i class=" fa fa-sort-amount-asc"></i></button>
+                <button type="button" class="small  button sort-btn" ng-click="sort('width')">{[{data.mouldCat.sortParam[1]}]} <i class=" fa fa-sort-amount-asc"></i></button>
+                <button type="button" class="small  button sort-btn" ng-click="sort('code')">{[{data.mouldCat.sortParam[2]}]} <i class=" fa fa-sort-amount-asc"></i></button>
             </div>
         </div>
         <div class="grid-container ">
@@ -111,18 +115,18 @@
                         <div class="medium-6 cell">
                             <table style="width:100%; border:0px">
                                 <tr>
-                                    <th>ширина</th>
-                                    <th>висота</th>
+                                    <th>{[{data.mouldCat.mouldLabels[0]}]}</th>
+                                    <th>{[{data.mouldCat.mouldLabels[1]}]}</th>
                                 </tr>
-                                <td>{[{x.width}]} мм</td>
-                                <td>{[{x.height}]} мм</td>
+                                <td>{[{x.width}]} mm</td>
+                                <td>{[{x.height}]} mm</td>
                             </table>
                         </div>
                         <div class="medium-6 cell ">
                             <table style="width:100%; border:0px">
                                 <tr>
-                                    <th>код</th>
-                                    <th class="text-right">ціна, грн </th>
+                                    <th>{[{data.mouldCat.mouldLabels[2]}]}</th>
+                                    <th class="text-right">{[{data.mouldCat.mouldLabels[3]}]}</th>
                                 </tr>
                                 <tr>
                                     <td class="mould-item_code">{[{x.code}]}</td>
@@ -148,10 +152,10 @@
                     <a href="viber://chat?number={[{data.vbr}]}" target="_blank"><i class="fab fa-viber fa-2x viber"></i></a>
                         <a href="https://t.me/{[{data.tlgrm}]}" target="_blank"><i class="fab fa-telegram fa-2x tlgrm"></i></a></p>
                     <p><a href="mailto:{[{data.email}]}" target="_blank"> {[{data.email}]}</a></p>
-                    <p class="pre">{[{data.schedule}]}<br>Неділя — вихідний</p> <br>
+                    <p class="pre">{[{data.schedule}]}</p> <br>
                     <a href="https://www.facebook.com/{[{data.fb}]}/" target="_blank">
-                        <i class="fas fa-facebook-square fa-2x"></i></a>
-                    <a href="https://www.instagram.com/{[{data.insta}]}/" target="_blank"> <i class="fas fa-instagram fa-2x"></i></a>
+                        <i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a href="https://www.instagram.com/{[{data.insta}]}/" target="_blank"> <i class="fab fa-instagram fa-2x"></i></a>
                 </div>
             </div>
         </footer>
