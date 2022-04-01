@@ -18,26 +18,47 @@
     "fb": "kleynod.lviv",
     "insta": "kleynod_framegallery",
     "mail": "kleynod.lviv@gmail.com",
+    "mainMenu": [
+    {
+        "h": "main",
+        "a": "#!/"
+    },
+    {
+        "h": "shop",
+        "a": "https://shop.rama.lviv.ua"
+    },
+    {
+        "h": "services & portfolio",
+        "a": "#!/portfolio"
+    },
+    {
+        "h": "mouldings collection",
+        "a": "#!/mouldings"
+    },
+    {
+        "h": "passepartout collection",
+        "a": "#!/passepartout"
+    }],
     "mainLinks": [
     {
         "id": "EN-1",
-        "url": "https://shop.rama.lviv.ua/index",
+        "url": "https://shop.rama.lviv.ua",
         "alt": "shop"
     },
     {
         "id": "EN-2",
-        "url": "portfolio",
-        "alt": "Services & portfolio"
+        "url": "#!/portfolio",
+        "alt": "services & portfolio"
     },
     {
         "id": "EN-3",
-        "url": "catalog_baget",
+        "url": "#!/mouldings",
         "alt": "mouldings collection"
     },
     {
         "id": "EN-4",
-        "url": "catalog_passepartou",
-        "alt": "Passepartout collection"
+        "url": "#!/passepartout",
+        "alt": "passepartout collection"
     }],
     "aboutUs":
     {
