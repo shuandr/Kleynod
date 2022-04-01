@@ -16,6 +16,9 @@ app.config(['$compileProvider', "$routeProvider", "$interpolateProvider",
             .when('/mouldings', {
                 templateUrl: 'mouldings.html'
             })
+            .when('/mould', {
+                templateUrl: 'mould.html'
+            })
             .when('/passepartout', {
                 templateUrl: 'passepartout.html'
             })
@@ -27,6 +30,25 @@ app.config(['$compileProvider', "$routeProvider", "$interpolateProvider",
 
 
 app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $location, $timeout) {
+
+    $scope.$on('$viewContentLoaded', function(event) {
+        $scope.whatView();
+        $timeout(function() {
+            if ($route.current.templateUrl == 'mould.html') {
+                $location.search({ code: $scope.selectedMould.code });
+
+            }
+        }, 200);
+    });
+
+    $scope.whatView = function() {
+        if ($route.current.templateUrl !== 'main.html') {
+            $scope.mainView = false;
+        } else {
+            $scope.mainView = true;
+        }
+
+    };
 
     $http.get("assets/data/UA-data.json").then(function(response) {
         $scope.UAdata = response.data;
@@ -40,6 +62,7 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
     });
 
     var euroExchange = 34.5;
+    var urlQuery = $location.search();
 
     $scope.setLang = "en";
 
@@ -147,5 +170,63 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
             }
 
         });
+
+        if (urlQuery.code) {
+            for (var i = $scope.allMoulds.length - 1; i >= 0; i--) {
+                var mould = $scope.allMoulds[i];
+
+                if (mould.code == urlQuery.code) {
+                    $scope.selectedMould = mould;
+                    break;
+                }
+
+            }
+        } else {
+            $scope.selectedMould = $scope.allMoulds[0];
+        }
+
     });
+
+    $scope.selectMould = function(mould) {
+        $scope.selectedMould = mould;
+        $location.search({ code: mould.code });
+
+
+    };
+    $scope.nextMould = function() {
+        arr = $scope.allMoulds;
+        index = arr.indexOf($scope.selectedMould);
+        if (index < arr.length - 1) {
+            $scope.selectedMould = arr[index + 1];
+        } else {
+            $scope.selectedMould = arr[0];
+        };
+
+        $location.search({ code: $scope.selectedMould.code });
+
+    };
+
+    $scope.prevMould = function() {
+        arr = $scope.allMoulds;
+        index = arr.indexOf($scope.selectedMould);
+        if (index !== 0) {
+            $scope.selectedMould = arr[index - 1];
+
+        } else {
+            $scope.selectedMould = arr[arr.length - 1];
+        };
+        $location.search({ code: $scope.selectedMould.code });
+
+    };
+    $scope.key = function($event) {
+        // nреба додати ng-keyup="key($event)" в html
+        if ($event.keyCode == 37) { // left arrow
+            $scope.prevMould();
+            console.log("йо");
+
+
+        } else if ($event.keyCode == 39) { // right arrow
+            $scope.nextMould();
+        }
+    };
 });
