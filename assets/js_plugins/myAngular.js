@@ -190,9 +190,32 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
     $scope.selectMould = function(mould) {
         $scope.selectedMould = mould;
         $location.search({ code: mould.code });
-
+        $scope.selMouldDescr();
 
     };
+    //призначає для багету параметри виробника і матеріалу
+    $scope.selMouldDescr = function() {
+        var arr1 = $scope.data.mouldCat.mouldProducent;
+        var arr2 = $scope.data.mouldCat.mouldMaterial;
+        for (var i = arr1.length - 1; i >= 0; i--) {
+            if (arr1[i].id == $scope.selectedMould.producent) {
+                $scope.selMouldProd = arr1[i].option;
+                break;
+            } else {
+                $scope.selMouldProd = "--";
+            }
+        }
+        for (var y = arr2.length - 1; y >= 0; y--) {
+            if (arr2[y].id == $scope.selectedMould.material) {
+                $scope.selMouldMat = arr2[y].option;
+                break;
+            } else {
+                $scope.selMouldMat = "--";
+            }
+        }
+    }
+
+
     $scope.nextMould = function() {
         arr = $scope.allMoulds;
         index = arr.indexOf($scope.selectedMould);
@@ -201,7 +224,7 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
         } else {
             $scope.selectedMould = arr[0];
         };
-
+        $scope.selMouldDescr();
         $location.search({ code: $scope.selectedMould.code });
 
     };
@@ -215,9 +238,10 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
         } else {
             $scope.selectedMould = arr[arr.length - 1];
         };
+        $scope.selMouldDescr();
         $location.search({ code: $scope.selectedMould.code });
-
     };
+
     $scope.key = function($event) {
         // nреба додати ng-keyup="key($event)" в html
         if ($event.keyCode == 37) { // left arrow

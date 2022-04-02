@@ -153,7 +153,7 @@
     },
     "mouldCat": {
         "title": "mouldings collection",
-        "sortLabels": ["producer", "material", "width", "code"],
+        "sortLabels": ["producent", "material", "width", "code"],
         "sortParam": ["price", "width", "code"],
 
         "mouldProducent": [
@@ -172,7 +172,7 @@
             {"id": "p", "option": "plastic"}
         ],
 
-        "mouldLabels": ["width", "height", "code", "price, UAH"]
+        "mouldLabels": ["width", "height", "producent", "material", "code", "price, UAH"]
 
     }
 
