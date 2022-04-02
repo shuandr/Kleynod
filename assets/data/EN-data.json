@@ -8,16 +8,14 @@
     "telView3": " ",
     "vbr": "%2B380685299974",
     "tlgrm": "kleynodlviv",
+    "fb": "kleynod.lviv",
+    "insta": "kleynod_framegallery",
     "email": "kleynod.lviv@gmail.com",
-    "schedule": "Mo-Fr: 10:00—18:30,  \nSa: 10:00—15:00",
+    "schedule": "MO-FR: 10:00—18:30,  \nSA: 10:00—15:00",
 
     "logoImg": "main-logo-EN.svg",
     "slogan": "slogan-EN.svg",
 
-
-    "fb": "kleynod.lviv",
-    "insta": "kleynod_framegallery",
-    "mail": "kleynod.lviv@gmail.com",
     "mainMenu": [
     {
         "h": "main",
@@ -153,6 +151,7 @@
     },
     "mouldCat": {
         "title": "mouldings collection",
+        "backToCat": "to catalogue",
         "sortLabels": ["producent", "material", "width", "code"],
         "sortParam": ["price", "width", "code"],
 
@@ -172,7 +171,7 @@
             {"id": "p", "option": "plastic"}
         ],
 
-        "mouldLabels": ["width", "height", "producent", "material", "code", "price, UAH"]
+        "mouldLabels": ["width", "height", "producent", "material", "price"]
 
     }
 

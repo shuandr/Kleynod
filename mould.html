@@ -29,7 +29,8 @@
 
 <body>
   
-    <div class="grid-container ">
+    <div id="mouldView" class="grid-container text-center"><br>    
+        <a href="#!/mouldings" type="button" class=" button" style="font-size:1.2rem;"><i class="fas fa-arrow-left"></i> {[{data.mouldCat.backToCat}]}</a>
         <div class="grid-x grid-margin-x align-center-middle">
             <div class="cell large-1 show-for-large text-right">
                 <button ng-click="prevMould()" type="button" class=" button  "><i class="fas fa-arrow-left fa-2x"></i></button>
@@ -37,7 +38,7 @@
             <div class="cell  large-10  carton-hole">
                 <div class="grid-x">
                     <div class="cell">
-                        <img src="assets/img/baget/{[{selectedMould.code}]}.jpg" alt="">
+                        <img src="assets/img/baget/{[{selectedMould.code}]}.webp" alt="">
                     </div>
                     <div class="cell">
                         <div class="mould-item-descr white-bg dark-gold text-center">
@@ -45,15 +46,15 @@
                                 <tr class="mould-item-labels">
                                     <th ng-repeat="x in data.mouldCat.mouldLabels">{[{x}]}</th>
                                 </tr>
-                                <tr>
-                                    <td>{[{selectedMould.width}]} mm</td>
-                                    <td>{[{selectedMould.height}]} mm</td>
+                                <tr class="s-bold">
+                                    <td>{[{selectedMould.width}]}<span class="sm-font"> mm</span></td>
+                                    <td>{[{selectedMould.height}]}<span class="sm-font"> mm</span></td>
                                     <td>{[{selMouldProd}]}</td>
                                     <td>{[{selMouldMat}]}</td>
-                                    <td class="item_code">{[{selectedMould.code}]}</td>
-                                    <td class="item_price">{[{selectedMould.price | currency : "" : 0 }]}</td>
+                                    <td class="item_price">{[{selectedMould.price | currency : "" : 0 }]} <span class="sm-font"><br>грн</span></td>
                                 </tr>
                             </table>
+                            <div class="text-left item_code">{[{selectedMould.code}]}</div>
                         </div>
                     </div>
                 </div>

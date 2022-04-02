@@ -8,15 +8,14 @@
     "telView3": " ",
     "vbr": "%2B380685299974",
     "tlgrm": "kleynodlviv",
+    "fb": "kleynod.lviv",
+    "insta": "kleynod_framegallery",
     "email": "kleynod.lviv@gmail.com",
     "schedule": "ПН—ПТ: 10:00—18:30,  \nСБ: 10:00—15:00",
 
     "logoImg": "main-logo-UA.svg",
     "slogan": "slogan.svg",
 
-    "fb": "kleynod.lviv",
-    "insta": "kleynod_framegallery",
-    "mail": "kleynod.lviv@gmail.com",
     "mainMenu": [
     {
         "h": "головна",
@@ -153,6 +152,8 @@
     "mouldCat":
     {
         "title": "колекція паспарту",
+        "backToCat": "до каталогу",
+
         "sortLabels": ["виробник", "матеріал", "ширина", "код багету"],
         "sortParam": ["за ціною", "за шириною", "за кодом"],
 
@@ -202,7 +203,7 @@
             "id": "p",
             "option": "пластик"
         }],
-        "mouldLabels": ["ширина", "висота", "виробник", "матеріал", "код", "ціна, грн"]
+        "mouldLabels": ["ширина", "висота", "виробник", "матеріал", "ціна"]
 
     }
 }

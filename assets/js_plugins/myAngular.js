@@ -71,13 +71,13 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
 
             $scope.setLang = "ua";
             $scope.data = $scope.ENdata;
-            $scope.mouldProducent = $scope.data.mouldCat.mouldProducent;
-            $scope.mouldMaterial = $scope.data.mouldCat.mouldMaterial;
 
         } else {
             $scope.data = $scope.UAdata;
             $scope.setLang = "en";
         }
+        $scope.mouldProducent = $scope.data.mouldCat.mouldProducent;
+        $scope.mouldMaterial = $scope.data.mouldCat.mouldMaterial;
     };
 
     $scope.mouldWidths = [{
