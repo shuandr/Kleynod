@@ -1,4 +1,4 @@
-var app = angular.module('kleynod', ['ngRoute', 'ngSanitize']);
+var app = angular.module('kleynod', ['ngRoute', 'ngSanitize', 'slickCarousel']);
 
 app.config(['$compileProvider', "$routeProvider", "$interpolateProvider",
 
@@ -63,6 +63,57 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
 
     var euroExchange = 34.5;
     var urlQuery = $location.search();
+
+    //Angular Slick Carousel
+
+    $scope.founderSlickConfig = {
+        arrows: false,
+            infinite: true,
+            autoplay: true,
+            slidesToShow: 1,
+            
+            pauseOnHover: false,
+            autoplaySpeed: 4500,
+            speed: 1500,
+
+            fade: true,
+    };
+
+    $scope.smallSlickConfig = {
+       
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+
+                }
+            },
+            {
+                breakpoint: 960,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+
+        ],
+        pauseOnHover: true,
+        autoplaySpeed: 1800
+    };
+    //END Angular Slick Carousel
 
     $scope.setLang = "en";
 
