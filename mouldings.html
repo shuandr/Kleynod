@@ -59,7 +59,7 @@
         <div class="cell">{[{data.mouldCat.sortLabels[3]}]}:
             <input type="text" ng-model="myFilter.code">
         </div>
-        <div class="small-12 cell">
+        <div class="cell auto text-center">
             <button type="button" class="small  button sort-btn" ng-click="sort('price')">{[{data.mouldCat.sortParam[0]}]} <i class=" fa fa-sort-amount-asc"></i></button>
             <button type="button" class="small  button sort-btn" ng-click="sort('width')">{[{data.mouldCat.sortParam[1]}]} <i class=" fa fa-sort-amount-asc"></i></button>
             <button type="button" class="small  button sort-btn" ng-click="sort('code')">{[{data.mouldCat.sortParam[2]}]} <i class=" fa fa-sort-amount-asc"></i></button>
@@ -76,18 +76,21 @@
                     <div class=" cell">
                         <table>
                             <tr class="mould-item-labels">
-                                <th>{[{data.mouldCat.mouldLabels[0]}]}</th>
+                                <th class="show-for-medium">{[{data.mouldCat.mouldLabels[0]}]}</th>
                                 <th>{[{data.mouldCat.mouldLabels[1]}]}</th>
-                                <th>{[{data.mouldCat.mouldLabels[4]}]}</th>
+                                <th>{[{data.mouldCat.mouldLabels[2]}]}</th>
+                                <th>{[{data.mouldCat.mouldLabels[5]}]}</th>
                             </tr>
-                            <td>{[{x.width}]} mm</td>
-                            <td>{[{x.height}]} mm</td>
-                            <td class="item_price ">{[{x.price | currency : "" : 0 }]}<span class="sm-font"><br> грн</span></td>
+                            <tr>
+                                <td class="show-for-medium sm-font gray">{[{x.code}]}</td>
+                                <td>{[{x.width}]} <span class="sm-font">mm</span></td>
+                                <td>{[{x.height}]} <span class="sm-font">mm</span></td>
+                                <td class="item_price ">{[{x.price | currency : "" : 0 }]}<span class="sm-font"><br>{[{data.mouldCat.priceUnit}]}</span></td>
                             </tr>
-                        </table>   
+                        </table>
                     </div>
                 </div>
-                <div class="text-left item_code">{[{x.code}]}</div>
+                <!-- <div class="text-left item_code">{[{x.code}]}</div> -->
             </div>
         </div>
     </div>

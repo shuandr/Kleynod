@@ -47,14 +47,15 @@
                                     <th ng-repeat="x in data.mouldCat.mouldLabels">{[{x}]}</th>
                                 </tr>
                                 <tr class="s-bold">
+                                    <td class="item_code">{[{selectedMould.code}]}</td>
                                     <td>{[{selectedMould.width}]}<span class="sm-font"> mm</span></td>
                                     <td>{[{selectedMould.height}]}<span class="sm-font"> mm</span></td>
                                     <td>{[{selMouldProd}]}</td>
                                     <td>{[{selMouldMat}]}</td>
-                                    <td class="item_price">{[{selectedMould.price | currency : "" : 0 }]} <span class="sm-font"><br>грн</span></td>
+                                    <td class="item_price">{[{selectedMould.price | currency : "" : 0 }]} <span class="sm-font"><br>{[{data.mouldCat.priceUnit}]}</span></td>
                                 </tr>
                             </table>
-                            <div class="text-left item_code">{[{selectedMould.code}]}</div>
+                            <!-- <div class="text-left item_code">{[{selectedMould.code}]}</div> -->
                         </div>
                     </div>
                 </div>
