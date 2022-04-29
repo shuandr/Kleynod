@@ -61,6 +61,7 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
 
     });
 
+
     var euroExchange = 34.5;
     var urlQuery = $location.search();
 
@@ -68,19 +69,19 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
 
     $scope.founderSlickConfig = {
         arrows: false,
-            infinite: true,
-            autoplay: true,
-            slidesToShow: 1,
-            
-            pauseOnHover: false,
-            autoplaySpeed: 4500,
-            speed: 1500,
+        infinite: true,
+        autoplay: true,
+        slidesToShow: 1,
 
-            fade: true,
+        pauseOnHover: false,
+        autoplaySpeed: 4500,
+        speed: 1500,
+
+        fade: true,
     };
 
     $scope.smallSlickConfig = {
-       
+
         arrows: false,
         infinite: true,
         autoplay: true,
@@ -165,39 +166,61 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
         $scope.sortKey = keyname; //set the sortKey to the param passed
         $scope.reverse = !$scope.reverse; //if true make it false and vice versa
     };
+    $scope.addPriceFromCurc = function(obj) {
+        for (var i = $scope.curcMoulds.length - 1; i >= 0; i--) {
+            if (obj.code == $scope.curcMoulds[i].code) {
+                var price = $scope.curcMoulds[i].price;
+            }
+        };
+        return price ? price : 0;
+    }
 
     $http.get("assets/data/mould_catalog.json").then(function(response) {
         $scope.allMouldsCatalog = response.data;
 
-        $scope.allMouldsCatalog.garcia.forEach(function(obj) {
-            obj.producent = 'es';
-            obj.material = "w";
-            obj.price *= euroExchange;
-        });
-        $scope.allMouldsCatalog.injac.forEach(function(obj) {
-            obj.producent = 'sr';
-            obj.material = "w";
-            obj.price *= euroExchange;
+        $http.get("https://shuandr.github.io/Curculator/assets/json/mould_catalog.json")
+            .then(function(response) {
+                var arr = [];
+                for (let x in response.data) {
+                    arr.push(response.data[x]);
+                }
+                $scope.curcMoulds = arr.flat();
 
-        });
-        $scope.allMouldsCatalog.framerica.forEach(function(obj) {
-            obj.producent = 'us';
-            obj.material = "m";
-        });
-        $scope.allMouldsCatalog.esel.forEach(function(obj) {
-            obj.producent = 'it';
-            obj.material = "w";
-            obj.price *= euroExchange;
-        });
-        $scope.allMouldsCatalog.werrama.forEach(function(obj) {
-            obj.producent = 'pl';
-            obj.material = "w";
-        });
-        $scope.allMouldsCatalog.clever.forEach(function(obj) {
-            obj.producent = 'ua';
-            obj.material = "p";
-            obj.price *= euroExchange;
-        });
+
+                $scope.allMouldsCatalog.garcia.forEach(function(obj) {
+                    obj.producent = 'es';
+                    obj.material = "w";
+                    obj.price = $scope.addPriceFromCurc(obj) * euroExchange;
+                });
+                $scope.allMouldsCatalog.injac.forEach(function(obj) {
+                    obj.producent = 'sr';
+                    obj.material = "w";
+                    obj.price = $scope.addPriceFromCurc(obj) * euroExchange;
+
+                });
+                $scope.allMouldsCatalog.framerica.forEach(function(obj) {
+                    obj.producent = 'us';
+                    obj.material = "m";
+                    obj.price = $scope.addPriceFromCurc(obj);
+                });
+                $scope.allMouldsCatalog.esel.forEach(function(obj) {
+                    obj.producent = 'it';
+                    obj.material = "w";
+                    obj.price = $scope.addPriceFromCurc(obj) * euroExchange;
+                });
+                $scope.allMouldsCatalog.werrama.forEach(function(obj) {
+                    obj.producent = 'pl';
+                    obj.material = "w";
+                    obj.price = $scope.addPriceFromCurc(obj);
+                });
+                $scope.allMouldsCatalog.clever.forEach(function(obj) {
+                    obj.producent = 'ua';
+                    obj.material = "p";
+                    obj.price = $scope.addPriceFromCurc(obj) * euroExchange;
+                });
+                // console.log($scope.allMouldsCatalog.garcia[5]);
+
+            });
 
         var createArray = function() {
             var arr = [];
