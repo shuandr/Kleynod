@@ -288,6 +288,12 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
             }
         }
     }
+    $scope.copyImgUrl = function() {
+        var copyText = "https://rama.lviv.ua/assets/img/baget/" + $scope.selectedMould.code + ".webp";
+        navigator.clipboard.writeText(copyText);
+    }
+
+
 
 
     $scope.nextMould = function() {
