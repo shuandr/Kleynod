@@ -1,116 +1,115 @@
-
-    <br><br>
-    <div class="grid-x grid-margin-x align-center">
-        <div class="cell medium-11 large-8  carton-hole">
-            <img src="assets/img/prtfl_top-image.webp" alt="">
-        </div>
-    </div>
-    <!-- PAINTING -->
-    <section id="painting">
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.painting.title}]}</h2>
-        </div>
-        <div class="clnd-white-wrapper">
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell medium-11 large-10 xlarge-8 text-center">
-                    <p class="pre">{[{data.painting.text}]}</p>
-                </div>
-            </div>
-            <slick settings="smallSlickConfig">
-                <img ng-repeat="slide in data.painting.img" src="assets/img/painting/{[{slide}]}.webp" alt="">
-            </slick>
-            <br><br>
-            <div class="divider"></div>
-        </div>
-    </section><br>
-    <!-- END OF PAINTING -->
-    <!-- GRAPHICS -->
-    <section id="graphics">
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.graphics.title}]}</h2>
-        </div>
-        <div class="clnd-white-wrapper">
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell medium-11 large-10 xlarge-8 text-center">
-                    <p class="pre">{[{data.graphics.text}]}</p>
-                </div>
-            </div>
-            <slick settings="smallSlickConfig">
-                <img ng-repeat="slide in data.graphics.img" src="assets/img/graphics/{[{slide}]}.webp" alt="">
-            </slick><br><br>
-            <div class="divider"></div>
-        </div>
-    </section><br>
-    <!-- END OF GRAPHICS -->
-    <!-- MIRRORS -->
-    <section id="mirrors">
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.mirrors.title}]}</h2>
-        </div>
-        <div class="clnd-white-wrapper">
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell medium-11 large-10 xlarge-8 text-center">
-                    <p class="pre">{[{data.mirrors.text}]}</p>
-                </div>
-            </div>
-            <slick settings="smallSlickConfig">
-                <img ng-repeat="slide in data.mirrors.img" src="assets/img/mirrors/{[{slide}]}.webp" alt="">
-            </slick><br><br>
-            <div class="divider"></div>
-        </div>
-    </section><br>
-    <!-- END OF MIRRORS -->
-    <!-- EMBROIDERY -->
-    <section id="embroidery">
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.embroidery.title}]}</h2>
-        </div>
-        <div class="clnd-white-wrapper">
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell medium-11 large-10 xlarge-8 text-center">
-                    <p class="pre">{[{data.embroidery.text}]}</p>
-                </div>
-            </div>
-            <slick settings="smallSlickConfig">
-                <img ng-repeat="slide in data.embroidery.img" src="assets/img/embroidery/{[{slide}]}.webp" alt="">
-            </slick><br><br>
-            <div class="divider"></div>
-        </div>
-    </section><br>
-    <!-- END OF EMBROIDERY -->
-    <!-- PHOTOS -->
-    <section id="photos">
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.photos.title}]}</h2>
-        </div>
-        <div class="clnd-white-wrapper">
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell medium-11 large-10 xlarge-8 text-center">
-                    <p class="pre">{[{data.photos.text}]}</p>
-                </div>
-            </div>
-            <slick settings="smallSlickConfig">
-                <img ng-repeat="slide in data.photos.img" src="assets/img/photos/{[{slide}]}.webp" alt="">
-            </slick><br><br>
-            <div class="divider"></div>
-        </div>
-    </section><br>
-    <!-- END OF PHOTOS -->
-    <!-- CUSTOM_ITEMS -->
-    <section id="custom_items">
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.customItems.title}]}</h2>
-        </div>
-        <div class="clnd-white-wrapper">
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell medium-11 large-10 xlarge-8 text-center">
-                    <p class="pre">{[{data.customItems.text}]}</p>
-                </div>
-            </div>
-            <slick settings="smallSlickConfig">
-                <img ng-repeat="slide in data.customItems.img" src="assets/img/objects/{[{slide}]}.webp" alt="">
-            </slick><br><br>
-            <div class="divider"></div>
-        </div>
-    </section><br>
-    
+<!-- ng-view -->
+ <br><br>
+ <div class="grid-x grid-margin-x align-center">
+     <div class="cell medium-11 large-8  carton-hole">
+         <img src="assets/img/prtfl_top-image.webp" alt="">
+     </div>
+ </div>
+ <!-- PAINTING -->
+ <section id="painting">
+     <div class="clnd-title">
+         <h2 class="uppercase brown text-center">{[{data.painting.title}]}</h2>
+     </div>
+     <div class="clnd-white-wrapper">
+         <div class="grid-x grid-padding-x align-center">
+             <div class="cell medium-11 large-10 xlarge-8 text-center">
+                 <p class="pre">{[{data.painting.text}]}</p>
+             </div>
+         </div>
+         <slick settings="smallSlickConfig">
+             <img ng-repeat="slide in data.painting.img" src="assets/img/painting/{[{slide}]}.webp" alt="">
+         </slick>
+         <br><br>
+         <div class="divider"></div>
+     </div>
+ </section><br>
+ <!-- END OF PAINTING -->
+ <!-- GRAPHICS -->
+ <section id="graphics">
+     <div class="clnd-title">
+         <h2 class="uppercase brown text-center">{[{data.graphics.title}]}</h2>
+     </div>
+     <div class="clnd-white-wrapper">
+         <div class="grid-x grid-padding-x align-center">
+             <div class="cell medium-11 large-10 xlarge-8 text-center">
+                 <p class="pre">{[{data.graphics.text}]}</p>
+             </div>
+         </div>
+         <slick settings="smallSlickConfig">
+             <img ng-repeat="slide in data.graphics.img" src="assets/img/graphics/{[{slide}]}.webp" alt="">
+         </slick><br><br>
+         <div class="divider"></div>
+     </div>
+ </section><br>
+ <!-- END OF GRAPHICS -->
+ <!-- MIRRORS -->
+ <section id="mirrors">
+     <div class="clnd-title">
+         <h2 class="uppercase brown text-center">{[{data.mirrors.title}]}</h2>
+     </div>
+     <div class="clnd-white-wrapper">
+         <div class="grid-x grid-padding-x align-center">
+             <div class="cell medium-11 large-10 xlarge-8 text-center">
+                 <p class="pre">{[{data.mirrors.text}]}</p>
+             </div>
+         </div>
+         <slick settings="smallSlickConfig">
+             <img ng-repeat="slide in data.mirrors.img" src="assets/img/mirrors/{[{slide}]}.webp" alt="">
+         </slick><br><br>
+         <div class="divider"></div>
+     </div>
+ </section><br>
+ <!-- END OF MIRRORS -->
+ <!-- EMBROIDERY -->
+ <section id="embroidery">
+     <div class="clnd-title">
+         <h2 class="uppercase brown text-center">{[{data.embroidery.title}]}</h2>
+     </div>
+     <div class="clnd-white-wrapper">
+         <div class="grid-x grid-padding-x align-center">
+             <div class="cell medium-11 large-10 xlarge-8 text-center">
+                 <p class="pre">{[{data.embroidery.text}]}</p>
+             </div>
+         </div>
+         <slick settings="smallSlickConfig">
+             <img ng-repeat="slide in data.embroidery.img" src="assets/img/embroidery/{[{slide}]}.webp" alt="">
+         </slick><br><br>
+         <div class="divider"></div>
+     </div>
+ </section><br>
+ <!-- END OF EMBROIDERY -->
+ <!-- PHOTOS -->
+ <section id="photos">
+     <div class="clnd-title">
+         <h2 class="uppercase brown text-center">{[{data.photos.title}]}</h2>
+     </div>
+     <div class="clnd-white-wrapper">
+         <div class="grid-x grid-padding-x align-center">
+             <div class="cell medium-11 large-10 xlarge-8 text-center">
+                 <p class="pre">{[{data.photos.text}]}</p>
+             </div>
+         </div>
+         <slick settings="smallSlickConfig">
+             <img ng-repeat="slide in data.photos.img" src="assets/img/photos/{[{slide}]}.webp" alt="">
+         </slick><br><br>
+         <div class="divider"></div>
+     </div>
+ </section><br>
+ <!-- END OF PHOTOS -->
+ <!-- CUSTOM_ITEMS -->
+ <section id="custom_items">
+     <div class="clnd-title">
+         <h2 class="uppercase brown text-center">{[{data.customItems.title}]}</h2>
+     </div>
+     <div class="clnd-white-wrapper">
+         <div class="grid-x grid-padding-x align-center">
+             <div class="cell medium-11 large-10 xlarge-8 text-center">
+                 <p class="pre">{[{data.customItems.text}]}</p>
+             </div>
+         </div>
+         <slick settings="smallSlickConfig">
+             <img ng-repeat="slide in data.customItems.img" src="assets/img/objects/{[{slide}]}.webp" alt="">
+         </slick><br><br>
+         <div class="divider"></div>
+     </div>
+ </section><br>

@@ -1,67 +1,66 @@
-
-    <div class="grid-x grid-margin-x align-center">
-        <div class="cell medium-11 large-8  carton-hole">
-            <img src="assets/img/hero_image_baget.webp" alt="">
-        </div>
-    </div>
-    <div id="catalog-baget">
-        <div class="clnd-title">
-            <h2 class="uppercase brown text-center">{[{data.mouldCat.title}]}</h2>
-        </div>
-    </div>
-    <!-- GRID -->
-    <div class="grid-x grid-padding-x  small-up-2 large-up-4 xxlarge-up-5 align-center align-bottom">
-        <div class="cell">{[{data.mouldCat.sortLabels[0]}]}:
-            <select ng-model="myFilter.producent">
-                <option ng-repeat="x in mouldProducent" ng-value="x.id">{[{x.option}]}</option>
-            </select>
-        </div>
-        <div class="cell">{[{data.mouldCat.sortLabels[1]}]}:
-            <select ng-model="myFilter.material">
-                <option ng-repeat="x in mouldMaterial" ng-value="x.id">{[{x.option}]}</option>
-            </select>
-        </div>
-        <div class="cell">{[{data.mouldCat.sortLabels[2]}]}:
-            <select ng-model="myFilter.widthRange">
-                <option ng-repeat="x in mouldWidths" ng-value="x.value">{[{x.option}]}</option>
-            </select>
-        </div>
-        <div class="cell">{[{data.mouldCat.sortLabels[3]}]}:
-            <input type="text" ng-model="myFilter.code">
-        </div>
-        <div class="cell auto text-center">
-            <button type="button" class="small  button sort-btn" ng-click="sort('price')">{[{data.mouldCat.sortParam[0]}]} <i class=" fa fa-sort-amount-asc"></i></button>
-            <button type="button" class="small  button sort-btn" ng-click="sort('width')">{[{data.mouldCat.sortParam[1]}]} <i class=" fa fa-sort-amount-asc"></i></button>
-            <button type="button" class="small  button sort-btn" ng-click="sort('code')">{[{data.mouldCat.sortParam[2]}]} <i class=" fa fa-sort-amount-asc"></i></button>
-        </div>
-    </div>
-    <div class="grid-container ">
-    </div>
-    <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4 xxlarge-up-5">
-        <div ng-repeat="x in allMoulds | orderBy:sortKey:reverse | filter: myFilter " class="cell fade">
-            <div class="mould-item">
-                <a href="#!/mould" ng-click="selectMould(x)">
-                    <img ng-src="assets/img/baget/thumbs/{[{x.code}]}.webp" loading="lazy" /></a>
-                <div class="grid-x collapse text-center">
-                    <div class=" cell">
-                        <table>
-                            <tr class="mould-item-labels">
-                                <th class="show-for-medium">{[{data.mouldCat.mouldLabels[0]}]}</th>
-                                <th>{[{data.mouldCat.mouldLabels[1]}]}</th>
-                                <th>{[{data.mouldCat.mouldLabels[2]}]}</th>
-                                <th>{[{data.mouldCat.mouldLabels[5]}]}</th>
-                            </tr>
-                            <tr>
-                                <td class="show-for-medium sm-font gray">{[{x.code}]}</td>
-                                <td>{[{x.width}]} <span class="sm-font">mm</span></td>
-                                <td>{[{x.height}]} <span class="sm-font">mm</span></td>
-                                <td class="item_price ">{[{x.price | currency : "" : 0 }]}<span class="sm-font"><br>{[{data.mouldCat.priceUnit}]}</span></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <!-- <div class="text-left item_code">{[{x.code}]}</div> -->
-            </div>
-        </div>
-    </div>
-    
+<!-- ng-view -->
+ <div class="grid-x grid-margin-x align-center">
+     <div class="cell medium-11 large-8  carton-hole">
+         <img src="assets/img/hero_image_baget.webp" alt="">
+     </div>
+ </div>
+ <div id="catalog-baget">
+     <div class="clnd-title">
+         <h2 class="uppercase brown text-center">{[{data.mouldCat.title}]}</h2>
+     </div>
+ </div>
+ <!-- GRID -->
+ <div class="grid-x grid-padding-x  small-up-2 large-up-4 xxlarge-up-5 align-center align-bottom">
+     <div class="cell">{[{data.mouldCat.sortLabels[0]}]}:
+         <select ng-model="myFilter.producent">
+             <option ng-repeat="x in mouldProducent" ng-value="x.id">{[{x.option}]}</option>
+         </select>
+     </div>
+     <div class="cell">{[{data.mouldCat.sortLabels[1]}]}:
+         <select ng-model="myFilter.material">
+             <option ng-repeat="x in mouldMaterial" ng-value="x.id">{[{x.option}]}</option>
+         </select>
+     </div>
+     <div class="cell">{[{data.mouldCat.sortLabels[2]}]}:
+         <select ng-model="myFilter.widthRange">
+             <option ng-repeat="x in mouldWidths" ng-value="x.value">{[{x.option}]}</option>
+         </select>
+     </div>
+     <div class="cell">{[{data.mouldCat.sortLabels[3]}]}:
+         <input type="text" ng-model="myFilter.code">
+     </div>
+     <div class="cell auto text-center">
+         <button type="button" class="small  button sort-btn" ng-click="sort('price')">{[{data.mouldCat.sortParam[0]}]} <i class=" fa fa-sort-amount-asc"></i></button>
+         <button type="button" class="small  button sort-btn" ng-click="sort('width')">{[{data.mouldCat.sortParam[1]}]} <i class=" fa fa-sort-amount-asc"></i></button>
+         <button type="button" class="small  button sort-btn" ng-click="sort('code')">{[{data.mouldCat.sortParam[2]}]} <i class=" fa fa-sort-amount-asc"></i></button>
+     </div>
+ </div>
+ <div class="grid-container ">
+ </div>
+ <div class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-4 xxlarge-up-5">
+     <div ng-repeat="x in allMoulds | orderBy:sortKey:reverse | filter: myFilter " class="cell fade">
+         <div class="mould-item">
+             <a href="#!/mould" ng-click="selectMould(x)">
+                 <img ng-src="assets/img/baget/thumbs/{[{x.code}]}.webp" loading="lazy" /></a>
+             <div class="grid-x collapse text-center">
+                 <div class=" cell">
+                     <table>
+                         <tr class="mould-item-labels">
+                             <th class="show-for-medium">{[{data.mouldCat.mouldLabels[0]}]}</th>
+                             <th>{[{data.mouldCat.mouldLabels[1]}]}</th>
+                             <th>{[{data.mouldCat.mouldLabels[2]}]}</th>
+                             <th>{[{data.mouldCat.mouldLabels[5]}]}</th>
+                         </tr>
+                         <tr>
+                             <td class="show-for-medium sm-font gray">{[{x.code}]}</td>
+                             <td>{[{x.width}]} <span class="sm-font">mm</span></td>
+                             <td>{[{x.height}]} <span class="sm-font">mm</span></td>
+                             <td class="item_price ">{[{x.price | currency : "" : 0 }]}<span class="sm-font"><br>{[{data.mouldCat.priceUnit}]}</span></td>
+                         </tr>
+                     </table>
+                 </div>
+             </div>
+             <!-- <div class="text-left item_code">{[{x.code}]}</div> -->
+         </div>
+     </div>
+ </div>

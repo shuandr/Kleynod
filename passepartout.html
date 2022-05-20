@@ -1,19 +1,18 @@
-
-    <div class="clnd-title">
-        <h2 class="uppercase brown text-center">{[{data.passepartout.title}]}</h2>
-    </div>
-    <div class="clnd-white-wrapper">
-        <div class="grid-x grid-padding-x align-center">
-            <div class="cell medium-11 large-10 xlarge-8 text-center">
-                <p class="pre">{[{data.passepartout.text}]}</p>
-            </div>
-        </div>
-    </div>
-    <div class="grid-x align-center">
-        <div ng-repeat="x in data.passepartout.img" class="cell medium-11 xlarge-9">
-            <div class="carton-hole">
-                <img style="min-width: 100%" src="assets/img/passepartout/{[{x}]}.webp" />
-            </div>
-        </div>
-    </div>
-   
+<!-- ng-view -->
+ <div class="clnd-title">
+     <h2 class="uppercase brown text-center">{[{data.passepartout.title}]}</h2>
+ </div>
+ <div class="clnd-white-wrapper">
+     <div class="grid-x grid-padding-x align-center">
+         <div class="cell medium-11 large-10 xlarge-8 text-center">
+             <p class="pre">{[{data.passepartout.text}]}</p>
+         </div>
+     </div>
+ </div>
+ <div class="grid-x align-center">
+     <div ng-repeat="x in data.passepartout.img" class="cell medium-11 xlarge-9">
+         <div class="carton-hole">
+             <img style="min-width: 100%" src="assets/img/passepartout/{[{x}]}.webp" />
+         </div>
+     </div>
+ </div>
