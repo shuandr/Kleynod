@@ -178,7 +178,7 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
     $http.get("assets/data/mould_catalog.json").then(function(response) {
         $scope.allMouldsCatalog = response.data;
 
-        $http.get("https://shuandr.github.io/Curculator/assets/json/mould_catalog.json")
+        $http.get("https://shuandr.github.io/Curculator/assets/json/catalog_prices.json")
             .then(function(response) {
                 var arr = [];
                 for (let x in response.data) {
