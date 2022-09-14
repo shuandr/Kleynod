@@ -1,10 +1,12 @@
 <!-- ng-view -->
  <br>
- <div class="grid-x grid-padding-x  small-up-2  large-up-4">
-     <div class="cell " ng-repeat="link in data.mainLinks" style="padding-top: 1.4rem">
-         <a href="{[{link.url}]}">
-             <img src="assets/img/main-link-{[{link.id}]}.webp" alt="{[{link.alt}]}">
-         </a>
+ <div class="grid-container">
+     <div class="grid-x grid-padding-x  small-up-2  large-up-3" style="justify-content: center">
+         <div class="cell " ng-repeat="link in data.mainLinks" style="padding-top: 1.4rem">
+             <a href="{[{link.url}]}">
+                 <img src="assets/img/main-link-{[{link.id}]}.webp" alt="{[{link.alt}]}">
+             </a>
+         </div>
      </div>
  </div><br>
  <!-- SLOGAN -->
