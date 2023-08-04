@@ -159,6 +159,13 @@
         "img": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15]
 
     },
+    "readymade":
+    {
+        "title": "readymade frames sale",
+        "text": "We always have ready-made frames of standard and non-standard sizes with a 50% discount, which we make from leftover baguette slats, because in our workshop we adhere to the principle of zero-waste production, using all materials and scraps as much as possible.\nYou can always find beautiful frames at reasonable prices that are perfect for photos, canvases, graphics, mirrors and other home decor.\nYou can add transparent or anti-reflective glass, passepartout, cardboard, fiberboard, mirror to any frame.",
+        "img": [1, 2, 3, 4, 5]
+
+    },
     "mouldCat": {
         "title": "mouldings collection",
         "backToCat": "to catalogue",
