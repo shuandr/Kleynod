@@ -3,16 +3,20 @@
      <h2 class="uppercase brown text-center">{[{data.readymade.title}]}</h2>
  </div>
  <div class="clnd-white-wrapper">
-     <div class="grid-x grid-padding-x align-center">
-         <div class="cell medium-11 large-10 xlarge-8 text-center">
-             <p class="pre">{[{data.readymade.text}]}</p>
+     <div class="grid-container">
+         <div class="grid-x grid-padding-x align-center">
+             <div class="cell medium-11 large-8  text-center">
+                 <p class="pre">{[{data.readymade.text}]}</p>
+             </div>
          </div>
      </div>
  </div>
- <div class="grid-x grid-padding-x align-center">
-     <div ng-repeat="x in data.readymade.img" class="cell medium-10 large-8 xlarge-7">
-         <div class="carton-hole">
-             <img style="min-width: 100%" src="assets/img/readymade/{[{x}]}.webp" />
+ <div class="grid-container">
+     <div class="grid-x grid-padding-x align-center">
+         <div ng-repeat="x in data.readymade.img" class="cell medium-10 large-8 xlarge-7">
+             <div class="carton-hole">
+                 <img style="min-width: 100%" src="assets/img/readymade/{[{x}]}.webp" />
+             </div>
          </div>
      </div>
  </div>
