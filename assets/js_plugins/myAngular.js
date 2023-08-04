@@ -22,6 +22,9 @@ app.config(['$compileProvider', "$routeProvider", "$interpolateProvider",
             .when('/passepartout', {
                 templateUrl: 'passepartout.html'
             })
+            .when('/readymade_sale', {
+                templateUrl: 'readymade_sale.html'
+            })
             .otherwise({
                 redirectTo: '/main'
             });
@@ -62,7 +65,7 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
     });
 
 
-    var euroExchange = 40;
+    var euroExchange = 36;
     var urlQuery = $location.search();
 
     //Angular Slick Carousel
