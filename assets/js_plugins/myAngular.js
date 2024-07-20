@@ -65,7 +65,7 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
     });
 
 
-    var euroExchange = 36;
+    var euroExchange = 45;
     var urlQuery = $location.search();
 
     //Angular Slick Carousel
