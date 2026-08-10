@@ -120,20 +120,17 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
     //END Angular Slick Carousel
 
     $scope.setLang = "en";
+    $scope.changeLang = () => {
+        const isEn = $scope.setLang === "en";
 
-    $scope.changeLang = function() {
-        if ($scope.setLang == "en") {
+        $scope.setLang = isEn ? "ua" : "en";
+        $scope.data = isEn ? $scope.ENdata : $scope.UAdata;
 
-            $scope.setLang = "ua";
-            $scope.data = $scope.ENdata;
-
-        } else {
-            $scope.data = $scope.UAdata;
-            $scope.setLang = "en";
-        }
         $scope.mouldProducent = $scope.data.mouldCat.mouldProducent;
         $scope.mouldMaterial = $scope.data.mouldCat.mouldMaterial;
     };
+
+    
 
     $scope.mouldWidths = [{
         value: '',
@@ -177,11 +174,12 @@ app.controller('kleynodCtrl', function($scope, $http, $route, $routeParams, $loc
         };
         return price ? price : 0;
     }
+    const mouldCatURL = 'https://script.google.com/macros/s/AKfycbx_s0WTw_f0n-tefKJA1L5rHrRe3w5rOXyqsFlK2snvZ12KHGomTVByVZJc-XLRAu-lAQ/exec';
 
     $http.get("assets/data/mould_catalog.json").then(function(response) {
         $scope.allMouldsCatalog = response.data;
 
-        $http.get("https://shuandr.github.io/Curculator/assets/json/mould_catalog.json")
+        $http.get(mouldCatURL)
             .then(function(response) {
                 var arr = [];
                 for (let x in response.data) {
